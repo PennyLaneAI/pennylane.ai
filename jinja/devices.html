@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block navbar %}
+{% set active_page = "devices" %}
+{% include "navbar.html" %}
+{% endblock %}
+
+
+<div class="container mt-5 pt-5 pb-5" id="wide-column">
+    <div class="text-center">
+        <h1>Devices and plugins</h1>
+        <p class="lead grey-text w-responsive mx-auto"> PennyLane is designed from the ground up to be hardware and device agnostic, allowing quantum functions to be easily dispatched to different quantum devices. A single computation can even include multiple quantum devices from different vendors.</p>
+        <p class="lead grey-text w-responsive mx-auto mb-5">Build your quantum algorithm once. Run it everywhere.</p>
+    </div>
+
+     <section class="my-5 center">
+            <div class="row" id="main-cards">
+                <div class="col-lg-5 mb-5">
+                    <a href="device-finder.html">
+                    <div class="card rounded-lg">
+                        <div class="text-center d-flex align-items-center pb-2">
+                            <div>
+                                <h3 class="card-title">
+                                <br>
+                                <strong>Devices</strong>
+                                </h3>
+                                <p class="mb-1 grey-text px-3">Find the best quantum device to run your application on - using PennyLane's native or external devices.</p>
+                                <img src="img/brain_board.png" class="img-fluid" style="max-width: 86px;"></img>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                <div class="col-lg-5 mb-5">
+                    <a href="plugins.html">
+                        <div class="card rounded-lg">
+                            <div class="text-center d-flex align-items-center pb-2">
+                                <div>
+                                    <h3 class="card-title">
+                                    <br>
+                                    <strong>Plugins</strong>
+                                    </h3>
+                                    <p class="mb-1 grey-text px-3">Have a look at the PennyLane's growing plugin ecosystem which provides access to the external devices.</p>
+                                    <img src="_static/key.png" class="img-fluid" style="max-width: 80px;"></img>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+     </section>
+</div>
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+{% endblock %}

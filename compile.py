@@ -20,7 +20,7 @@ FAQ = [
         "Does PennyLane work with hardware?",
         "Yes, PennyLane can be used to optimize quantum circuits running on hardware. "
         "Simply choose a hardware backend as your device. You can find all available backends "
-        "in the <a href=\"plugins.html\">plugins</a> section."
+        "in the <a href=\"devices.html\">devices</a> section."
     ),
     (
          "Can I use PennyLane with PyTorch/TensorFlow?",
@@ -99,11 +99,26 @@ def render_templates():
                            "for installing all plugins.",
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
         },
+        "devices.html": {
+            "devices_page": True,
+            "title": "Devices and ecosystem &#8212; PennyLane",
+            "canonical_url": "https://pennylane.ai/devices.html",
+            "description": "See the available PennyLane devices and plugins, allowing access to quantum simulators "
+                           "and hardware from IBM, Rigetti, Google, and more.",
+            "thumbnail": "https://pennylane.ai/img/thumbnail.png",
+        },
+        "device-finder.html": {
+            "devices_page": True,
+            "title": "Devices and ecosystem &#8212; PennyLane",
+            "canonical_url": "https://pennylane.ai/device-dfinder.html",
+            "description": "Find the right PennyLane device for your application.",
+            "thumbnail": "https://pennylane.ai/img/thumbnail.png",
+        },
         "plugins.html": {
-            "plugins_page": True,
-            "title": "Plugins and ecosystem &#8212; PennyLane",
-            "canonical_url": "https://pennylane.ai/plugins.html",
-            "description": "See the avilable PennyLane plugins, allowing access to quantum simulators "
+            "devices_page": True,
+            "title": "Devices and ecosystem &#8212; PennyLane",
+            "canonical_url": "https://pennylane.ai/devices.html",
+            "description": "See the available PennyLane plugins, allowing access to external devices, like quantum simulators "
                            "and hardware from IBM, Rigetti, Google, and more.",
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
         },

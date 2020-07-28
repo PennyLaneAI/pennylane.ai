@@ -1,64 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
 {% block navbar %}
-{% set active_page = "plugins" %}
+{% set active_page = "devices" %}
 {% include "navbar.html" %}
 {% endblock %}
 
 
 <div class="container mt-5 pt-5 pb-5" id="wide-column">
     <div class="text-center">
-        <h1>Plugins and ecosystem</h1>
-        <!-- <p class="grey-text w-responsive mx-auto">PennyLane provides a framework for the construction and optimization of hybrid quantum-classical computational models. These models can be dispatched to run on simulators and hardware devices via a large ecosystem of plugins.</p> -->
-        <p class="lead grey-text w-responsive mx-auto"> PennyLane is designed from the ground up to be hardware and device agnostic, allowing quantum functions to be easily dispatched to different quantum devices. A single computation can even include multiple quantum devices from different vendors.</p>
-        <p class="lead grey-text w-responsive mx-auto mb-5">Build your quantum algorithm once. Run it everywhere.</p>
+        <h1>Plugins</h1>
+        <p class="lead grey-text w-responsive mx-auto"> External quantum devices can be easily added to PennyLane by installing plugins.</p>
+        <p class="lead grey-text w-responsive mx-auto mb-5">These plugins are installed separately, providing a rich ecosystem integrating popular quantum software development libraries with the hybrid optimization capabilities of PennyLane.</p>
     </div>
 
     <div class="container">
-        <h2>Built in devices</h2>
-        <p>PennyLane comes with built-in support for several quantum devices:</p>
-
-        <div class="card-deck mt-5">
-            <div class="card plugin-card">
-                <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.plugins.default_qubit.DefaultQubit.html">
-                    <h4 class="card-header juicy-peach-gradient">default.qubit</h4>
-                    <div class="card-body">
-                        <p class="card-text">
-                            A simple state-vector qubit simulator written in Python.
-                            <br><br>A good choice for optimizations with a moderate number of qubits and parameters.
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="card plugin-card">
-                <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.plugins.default_gaussian.DefaultGaussian.html">
-                    <h4 class="card-header juicy-peach-gradient">default.gaussian</h4>
-                    <div class="card-body">
-                        <p class="card-text">
-                            A simple quantum photonic simulator written in Python.
-                            <br><br>A good choice for optimizating photonic systems.
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="card plugin-card">
-                <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.plugins.default_qubit_tf.DefaultQubitTF.html">
-                    <h4 class="card-header juicy-peach-gradient">default.qubit.tf</h4>
-                    <div class="card-body">
-                        <p class="card-text">
-                            A state-vector qubit simulator written using TensorFlow and supporting classical backpropagation. <br><br>A good choice when the number of parameters to be optimized is large.
-                        </p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <h2>Plugins</h2>
-        <p>External quantum devices can be easily added to PennyLane by installing plugins. These plugins are installed separately, providing a rich ecosystem integrating popular quantum software development libraries with the hybrid optimization capabilities of PennyLane.</p>
-
+        <h2>Endorsed Plugins</h2>
         <p>
             Below are a list of official PennyLane plugins supported by the PennyLane development team.
         </p>
