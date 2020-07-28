@@ -1,0 +1,51 @@
+version: 2.1
+
+orbs:
+  aws-cli: circleci/aws-cli@0.1.16
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7.2
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "requirements.txt" }}
+            - v1-dependencies-
+
+      - run:
+          name: Install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install pip setuptools --upgrade
+            pip install -r requirements.txt
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+
+      - run:
+          name: Build
+          command: |
+            . venv/bin/activate
+            python compile.py
+            zip -r /tmp/html.zip site
+
+      - store_artifacts:
+          path: /tmp/html.zip
+
+      - store_artifacts:
+          path: site
+
+workflows:
+  workflow:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: master

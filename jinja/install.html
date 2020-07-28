@@ -1,0 +1,278 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block navbar %}
+{% set active_page = "install" %}
+{% include "navbar.html" %}
+{% endblock %}
+<div class="container mt-5 pt-5" id="main-column">
+    <div class="text-center">
+        <h1>Install PennyLane</h1>
+        <p class="lead grey-text w-responsive mx-auto">PennyLane supports Python 3.5 or newer.</p>
+        <p class="lead grey-text w-responsive mx-auto mb-5">If you currently do not have Python 3 installed, we recommend <a href="https://www.anaconda.com/download/">Anaconda for Python 3</a>, a distributed version of Python packaged for scientific computation.</p>
+    </div>
+
+    <ul class="picker nav nav-pills nav-justified mt-5" id="version">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#stable" role="tab">Stable</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#preview" role="tab">Preview</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#source" role="tab">Source</a>
+        </li>
+    </ul>
+
+    <!-- Tab panels -->
+    <div class="tab-content pt-0" id="tab-version">
+
+        <div class="tab-pane in show active" id="stable" role="tabpanel">
+            <pre>
+                <code class="bash">
+# install the latest released version of PennyLane
+pip install pennylane --upgrade
+                </code>
+            </pre>
+        </div>
+        <div class="tab-pane slide" id="preview" role="tabpanel">
+            <pre>
+                <code class="bash">
+# install the latest development version of PennyLane
+pip install git+https://github.com/XanaduAI/pennylane.git#egg=pennylane
+                </code>
+            </pre>
+        </div>
+        <div class="tab-pane slide" id="source" role="tabpanel">
+            <pre>
+                <code class="bash">
+# download and install the latest source code from GitHub
+git clone https://github.com/XanaduAI/pennylane.git
+cd pennylane
+pip install -e .
+                </code>
+            </pre>
+            <p><i>Note: if installing from source for development, changes to the plugins module will require </i><code>pip install -e .</code><i> to be re-run to take effect.</i></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Install plugins</h2>
+
+        <p>
+            PennyLane supports various quantum frameworks and quantum hardware via an array of plugins. For more details, visit the plugins page.
+        </p>
+
+        <div class="picker nav nav-pills nav-justified" id="plugins">
+            <label class="nav-item">
+                <a class="nav-link">
+                    <input type="checkbox" pip="pennylane-sf">
+                    <span>StrawberryFields</span>
+                </a>
+            </label>
+            <label class="nav-item">
+                <a class="nav-link">
+                    <input type="checkbox" pip="pennylane-qiskit">
+                    <span>IBM Qiskit</span>
+                </a>
+            </label>
+            <label class="nav-item">
+                <a class="nav-link">
+                    <input type="checkbox" pip="pennylane-cirq">
+                    <span>Google Cirq</span>
+                </a>
+            </label>
+            <label class="nav-item">
+                <a class="nav-link">
+                    <input type="checkbox" pip="pennylane-forest">
+                    <span>Rigetti forest</span>
+                </a>
+            </label>
+            <label class="nav-item">
+                <a class="nav-link">
+                    <input type="checkbox" pip="pennylane-qsharp">
+                    <span>Microsoft Q#</span>
+                </a>
+            </label>
+        </div>
+
+        <div class="tab-content pt-0">
+            <div class="tab-pane in show active" role="tabpanel">
+                <pre id="plugin-install">
+                    <code class="bash">
+# Select one or more frameworks above to show how to install the PennyLane plugins.
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Install interfaces</h2>
+
+        <p>
+            PennyLane seamlessly integrates with various machine learning libraries,
+            making them "quantum aware", and allowing you to create arbitrary hybrid classical-quantum computations.
+        </p>
+
+        <div class="picker nav nav-pills nav-justified" id="interfaces">
+            <label class="nav-item">
+                <a class="nav-link" id="autograd">
+                    <input type="checkbox" pip="autograd">
+                    <span>NumPy/Autograd</span>
+                </a>
+            </label>
+            <label class="nav-item">
+                <a class="nav-link" id="tf">
+                    <input type="checkbox" pip="tensorflow>=1.13.2">
+                    <span>TensorFlow</span>
+                </a>
+            </label>
+            <label class="nav-item">
+                <a class="nav-link" id="pytorch">
+                    <input type="checkbox" pip="pytorch">
+                    <span>PyTorch</span>
+                </a>
+            </label>
+        </div>
+
+        <div class="tab-content pt-0">
+            <div class="tab-pane in show active" role="tabpanel">
+                <pre id="interfaces-install">
+                    <code class="bash">
+# Select one or more ML libraries above to install them to work with PennyLane.
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block footer %}
+{% include "footer.html" %}
+<script type="text/javascript">
+$(function(){
+  let params = new URLSearchParams(window.location.search);
+  var version = params.get('version');
+
+  if (version) {
+    $('#version li a').removeClass('active');
+    $('#tab-version .tab-pane').removeClass('active');
+    $('a[href="#' + version + '"]').addClass('active');
+    $('#' + version).tab('show');
+  };
+
+  $('#version .nav-item a').click(function (e) {
+     if (version != this.hash.substr(1)) {
+        params.set('version', this.hash.substr(1));
+        var newRelativePathQuery = window.location.pathname + '?' + params.toString();
+        history.pushState(null, '', newRelativePathQuery);
+     };
+  });
+});
+</script>
+<script type="text/javascript">
+var text = `
+# Select one or more quantum frameworks above to install the PennyLane plugins.
+`
+
+$(function(){
+    var $checks = $('#plugins label input').change(function () {
+        $checks.filter(':not(:checked)').map(function () {
+            $(this).parent().removeClass("active");
+        });
+        var vals = $checks.filter(':checked').map(function () {
+            $(this).parent().addClass("active");
+            return $(this).attr("pip")
+        }).get();
+        if (vals.length > 0) {
+            var new_text = hljs.highlight("bash", text + "pip install " + vals.join(' ') + "\n\n").value
+            $('#plugin-install code').html(new_text)
+        } else {
+            var new_text = hljs.highlight("bash",  text + "\n").value
+            $('#plugin-install code').html(new_text);
+        };
+    });
+});
+$(document).ready(function() {
+    $('#plugins label input').filter(':not(:checked)').map(function () {
+        $(this).parent().removeClass("active");
+    });
+    var vals = $('#plugins label input').filter(':checked').map(function () {
+        $(this).parent().addClass("active");
+        return $(this).attr("pip")
+    }).get();
+    if (vals.length > 0) {
+        var new_text = hljs.highlight("bash", text + "pip install " + vals.join(' ') + "\n\n").value
+        $('#plugin-install code').html(new_text)
+    } else {
+        var new_text = hljs.highlight("bash", text + "\n").value
+        $('#plugin-install code').html(new_text);
+    };
+});
+</script>
+
+<script type="text/javascript">
+var mltext = `
+# Select one or more ML libraries above to install them to work with PennyLane.
+`
+
+var pytorchMsg = `# Visit https://pytorch.org/get-started/locally/ for instructions on installing PyTorch.
+`
+
+$(function(){
+    var $checks = $('#interfaces label input').change(function () {
+        $checks.filter(':not(:checked)').map(function () {
+            $(this).parent().removeClass("active");
+        });
+        var vals = $checks.filter(':checked').map(function () {
+            $(this).parent().addClass("active");
+
+            if ($(this).attr("pip") != "pytorch") {
+                return $(this).attr("pip");
+            }
+        }).get();
+
+        var new_text = mltext;
+        if ($('#pytorch').hasClass('active')) {
+            new_text += pytorchMsg
+        };
+
+        if (vals.length > 0) {
+            new_text += "pip install " + vals.join(' ') + "\n\n";
+            var new_html = hljs.highlight("bash", new_text).value;
+            $('#interfaces-install code').html(new_html);
+        } else {
+            var new_html = hljs.highlight("bash",  new_text + "\n").value;
+            $('#interfaces-install code').html(new_html);
+        };
+
+    });
+});
+$(document).ready(function() {
+    $('#interfaces label input').filter(':not(:checked)').map(function () {
+        $(this).parent().removeClass("active");
+    });
+    var vals = $('#interfaces label input').filter(':checked').map(function () {
+        $(this).parent().addClass("active");
+        if ($(this).attr("pip") != "pytorch") {
+            return $(this).attr("pip");
+        }
+    }).get();
+
+    var new_text = mltext;
+    if ($('#pytorch').hasClass('active')) {
+        new_text += pytorchMsg
+    };
+
+    if (vals.length > 0) {
+        new_text += "pip install " + vals.join(' ') + "\n\n";
+        var new_html = hljs.highlight("bash", new_text).value;
+        $('#interfaces-install code').html(new_html);
+    } else {
+        var new_html = hljs.highlight("bash",  new_text + "\n").value;
+        $('#interfaces-install code').html(new_html);
+    };
+});
+</script>
+{% endblock %}
+{% endblock %}

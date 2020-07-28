@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity":
+        [
+        {% for question, answer in faq %}
+            {
+                "@type": "Question",
+                "name": {{ question | tojson }},
+                "acceptedAnswer":
+                {
+                    "@type": "Answer",
+                    "text": {{ answer | tojson }}
+                }
+            }{{ "," if not loop.last }}
+        {% endfor %}
+        ]
+    }
+    </script>
+{% endblock %}
+
+{% block content %}
+{% block navbar %}
+{% set active_page = "faq" %}
+{% include "navbar.html" %}
+{% endblock %}
+
+<div class="container mt-5 pt-5 pb-5" id="main-column">
+
+    <div class="text-center">
+        <h1>Frequently Asked Questions</h1>
+        <p class="lead grey-text w-responsive mx-auto"> Get <b>quick answers</b> to your most burning questions.</p>
+    </div>
+
+    {% for question, answer in faq %}
+    <a class="collapse-header" data-toggle="collapse" href="#faq{{loop.index}}" aria-expanded="false" aria-controls="faq{{ loop.index }}">
+        <h2 style="font-size: 19px;">
+            <i class="fas fa-angle-down rotate" style="float: right;"></i> {{ question }}
+        </h2>
+    </a>
+    <div class="collapse" id="faq{{loop.index}}">{{ answer }}</div>
+    {% endfor %}
+
+</div>
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+{% endblock %}

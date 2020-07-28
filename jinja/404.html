@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block navbar %}
+{% set active_page = "none" %}
+{% include "navbar.html" %}
+{% endblock %}
+
+<div class="container mt-5 pt-5 pb-5">
+
+    <div class="text-center pb-5">
+        <h1>Oops! <br> It looks like that page doesn't exist.</h1>
+        <p class="lead grey-text w-responsive mx-auto">Click <a href="index.html">here</a> to return to the PennyLane homepage, or check out our quantum machine learning resources and documentation below.</p>
+    </div>
+
+    <div class="row pb-5">
+        <div class="col-lg-4 mb-5">
+            <a href="faq.html">
+                <div class="card card-image" style="background-image: url(img/tower_small.jpg); background-size: cover;">
+                    <div class="text-center d-flex align-items-center rgba-white-strong mask">
+                        <div>
+                            <h3 class="card-title">
+                                <strong>Lost?</strong>
+                            </h3>
+                            <p class="mb-1 black-text px-3">Find yourself thinking 'Where am I' and 'How did I get here'? Get quick answers to your most burning questions with the Pennylane FAQ.</p>
+                            <div class="white-text d-flex justify-content-center">
+                                <h5>FAQ <i class="fas fa-angle-double-right"></i></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 mb-5">
+            <a href="https://pennylane.ai/qml">
+                <div class="card card-image" style="background-image: url(img/learn.png); background-size: cover;">
+                    <div class="text-center d-flex align-items-center rgba-white-strong mask">
+                        <div>
+                            <h3 class="card-title">
+                                <strong>Quantum machine learning</strong>
+                            </h3>
+                            <p class="mb-1 black-text px-3">Tutorials to introduce core QML concepts, including quantum nodes, optimization, and devices, via easy-to-follow examples.</p>
+                            <div class="white-text d-flex justify-content-center">
+                                <h5>Concepts, demos, and videos <i class="fas fa-angle-double-right"></i></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-4 mb-5">
+            <a href="https://pennylane.readthedocs.io">
+                <div class="card card-image" style="background-image: url(img/blackbird.jpg);">
+                    <div class="text-center d-flex align-items-center mask rgba-white-strong">
+                        <div>
+                            <h3 class="card-title"></i>
+                                <strong>Documentation</strong>
+                            </h3>
+                            <p class="mb-1 black-text px-3">Read the documentation, see the source code, make a bug report, and contribute directly to PennyLane.</p>
+                            <div class="white-text d-flex justify-content-center">
+                                <h5>Docs <i class="fas fa-angle-double-right"></i></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+{% endblock %}

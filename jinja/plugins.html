@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block navbar %}
+{% set active_page = "plugins" %}
+{% include "navbar.html" %}
+{% endblock %}
+
+
+<div class="container mt-5 pt-5 pb-5" id="wide-column">
+    <div class="text-center">
+        <h1>Plugins and ecosystem</h1>
+        <!-- <p class="grey-text w-responsive mx-auto">PennyLane provides a framework for the construction and optimization of hybrid quantum-classical computational models. These models can be dispatched to run on simulators and hardware devices via a large ecosystem of plugins.</p> -->
+        <p class="lead grey-text w-responsive mx-auto"> PennyLane is designed from the ground up to be hardware and device agnostic, allowing quantum functions to be easily dispatched to different quantum devices. A single computation can even include multiple quantum devices from different vendors.</p>
+        <p class="lead grey-text w-responsive mx-auto mb-5">Build your quantum algorithm once. Run it everywhere.</p>
+    </div>
+
+    <div class="container">
+        <h2>Built in devices</h2>
+        <p>PennyLane comes with built-in support for several quantum devices:</p>
+
+        <div class="card-deck mt-5">
+            <div class="card plugin-card">
+                <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.plugins.default_qubit.DefaultQubit.html">
+                    <h4 class="card-header juicy-peach-gradient">default.qubit</h4>
+                    <div class="card-body">
+                        <p class="card-text">
+                            A simple state-vector qubit simulator written in Python.
+                            <br><br>A good choice for optimizations with a moderate number of qubits and parameters.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="card plugin-card">
+                <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.plugins.default_gaussian.DefaultGaussian.html">
+                    <h4 class="card-header juicy-peach-gradient">default.gaussian</h4>
+                    <div class="card-body">
+                        <p class="card-text">
+                            A simple quantum photonic simulator written in Python.
+                            <br><br>A good choice for optimizating photonic systems.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="card plugin-card">
+                <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.plugins.default_qubit_tf.DefaultQubitTF.html">
+                    <h4 class="card-header juicy-peach-gradient">default.qubit.tf</h4>
+                    <div class="card-body">
+                        <p class="card-text">
+                            A state-vector qubit simulator written using TensorFlow and supporting classical backpropagation. <br><br>A good choice when the number of parameters to be optimized is large.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h2>Plugins</h2>
+        <p>External quantum devices can be easily added to PennyLane by installing plugins. These plugins are installed separately, providing a rich ecosystem integrating popular quantum software development libraries with the hybrid optimization capabilities of PennyLane.</p>
+
+        <p>
+            Below are a list of official PennyLane plugins supported by the PennyLane development team.
+        </p>
+        <div class="card-deck mt-5">
+            <a class="card plugin-card" href="https://pennylaneqiskit.readthedocs.io">
+                <h4 class="card-header weird-blue-gradient">
+                    Qiskit <img class="img-fluid plugin-logo" src="img/qiskit_logo_small.png" style="max-width: 20%;">
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        Qiskit is an open-source quantum software framework designed by IBM.
+                        Supported hardware backends include the IBM Quantum Experience.
+                    </p>
+                </div>
+            </a>
+            <a class="card plugin-card" href="https://pennylane-cirq.readthedocs.io/">
+                <h4 class="card-header weird-blue-gradient">
+                    Cirq
+                    <img class="img-fluid plugin-logo" src="img/cirq.png" style="max-width: 20%;">
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        Cirq is a Python library designed by Google for
+                        writing, manipulating, and optimizing quantum
+                        circuits and running them against quantum computers
+                        and simulators.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="card-deck mt-3">
+            <a class="card plugin-card" href="https://pennylane-forest.readthedocs.io">
+                <h4 class="card-header weird-blue-gradient">
+                    Rigetti Forest
+                    <img class="img-fluid plugin-logo" src="img/forest.png">
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        pyQuil and the Forest SDK are an open-source quantum software framework designed by Rigetti. Supported hardware backends include the Rigetti Aspen QPU.</p>
+                </div>
+            </a>
+            <a class="card plugin-card" href="https://pennylane-qsharp.readthedocs.io">
+                <h4 class="card-header weird-blue-gradient">
+                    Microsoft QDK
+                    <img class="img-fluid plugin-logo" src="img/qsharp.png" style="max-height: 25px">
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        Microsoft QDK is a library for quantum programming using the .NET Q# quantum programming language.
+                        Provides access to the QDK full state simulator to be used with PennyLane.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="card-deck mt-3">
+            <a class="card plugin-card" href="https://pennylane-sf.readthedocs.io">
+                <h4 class="card-header weird-blue-gradient">
+                    Strawberry Fields
+                    <img class="img-fluid plugin-logo" src="img/xanadu_sf.png">
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        Strawberry Fields is a Python library for simulating continuous variable quantum optical circuits.
+                        Combines Strawberry Fields' polished universal simulator suite with PennyLane's automatic
+                        differentiation and optimization.
+                    </p>
+                </div>
+            </a>
+            <a class="card plugin-card" href="https://pennylane-aqt.readthedocs.io">
+                <h4 class="card-header weird-blue-gradient">
+                    AQT
+                    <img class="img-fluid plugin-logo" src="img/aqt.png">
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        Access to Alpine Quantum Technologies' ion-trap quantum computer over the cloud.
+
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="card-deck mt-3">
+            <a class="card plugin-card" href="https://pennylane-honeywell.readthedocs.io">
+                <h4 class="card-header weird-blue-gradient">
+                    Honeywell
+                    <img class="img-fluid plugin-logo" src="img/honeywell.png" style="max-height: 27px;">
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        Honeywell Quantum Solutions provides access to ion-trap quantum computing hardware over the cloud.
+                    </p>
+                </div>
+            </a>
+            <a class="card plugin-card" href="https://pennylane-pq.readthedocs.io">
+                <h4 class="card-header weird-blue-gradient">
+                    ProjectQ
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        ProjectQ is an open-source quantum compilation framework.
+                    </p>
+                </div>
+            </a>
+            <!-- <div class="card hidden-card"></div> -->
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Community plugins</h2>
+        <p>In addition to the offical plugins, there are a wide range of plugins created by the PennyLane community.</p>
+        <p><em>To write your own PennyLane-compatible plugin, the best place to start is our overview of the <a href="https://pennylane.readthedocs.io/en/stable/development/plugins.html">plugin API</a>. Have a plugin you would like to have listed here? Let us know at <a href="mailto:software@xanadu.ai">software@xanadu.ai</a>.</em></p>
+        <div class="card-deck mt-5 mb-4">
+            <a class="card plugin-card" href="https://github.com/XanaduAI/pennylane-qulacs">
+                <h4 class="card-header spring-warmth-gradient">Qulacs</h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        Qulacs is a high-performance quantum circuit simulator for simulating large, noisy or parametric quantum circuits. Implemented in C/C++ and with python interface, Qulacs achieved both high speed circuit simulation and high usability.
+                    </p>
+                </div>
+            </a>
+            <a class="card plugin-card" href="https://github.com/synqs/pennylane-ls">
+                <h4 class="card-header spring-warmth-gradient">
+                    Labscript
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        This plugin provides a PennyLane device for executing quantum programs using Labscript Suite.
+                    </p>
+                </div>
+            </a>
+            <a class="card plugin-card" href="https://github.com/johannesjmeyer/pennylane-pyquest">
+                <h4 class="card-header spring-warmth-gradient">
+                    PyQuest
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        PyQuest is a Python library that connects to the high-performance mixed state simulator QuEST.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+{% endblock %}
