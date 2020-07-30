@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% block scripts %}
+    <!--  Lodash for checkbox filtering-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+    <!--  Load Javascript for checkbox filtering -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!--  Checkbox filtering script-->
+    <script defer src="javascript/filter_by_checkbox.js"> </script>
+{% endblock %}
+{% block content %}
+{% block navbar %}
+{% set active_page = "devices" %}
+{% include "navbar.html" %}
+{% endblock %}
+
+
+<div class="container mt-5 pt-5 pb-5" id="wide-column">
+
+    <div class="text-center">
+        <h1>Plugins</h1>
+        <p class="lead grey-text w-responsive mx-auto"> Quantum devices have different strengths and capabilities: Some are optimized for large circuits, others deal best with lots of optimization parameters, some work with qubits and others with qmodes. </p>
+        <p class="lead grey-text w-responsive mx-auto mb-5">Use the filters below to find the right device for your application.</p>
+    </div>
+
+    <div style="width: 20%; float:left">
+        <h4>Plugin</h4>
+            <div>
+                <input type="checkbox" name="plugin" value="pennylane" id="pennylane"><label for="pennylane"> PennyLane </label>
+            </div>
+            <div>
+                <input type="checkbox" name="plugin" value="qiskit" id="qiskit"><label for="qiskit"> Qiskit </label>
+            </div>
+        <h4>Model</h4>
+            <div>
+                <input type="checkbox" name="model" value="qubit" id="qubit"><label for="qubit"> Qubit </label>
+            </div>
+            <div>
+                <input type="checkbox" name="model" value="cv" id="cv"><label for="cv"> Continuous-Variable </label>
+            </div>
+        <h4>Mode</h4>
+            <div>
+                <input type="checkbox" name="mode" value="stochastic" id="stochastic"><label for="stochastic"> Stochastic </label>
+            </div>
+            <div>
+                <input type="checkbox" name="mode" value="exact" id="exact"><label for="exact"> Exact </label>
+            </div>
+    </div>
+
+    <div style="width: 80%; float:right">
+        <div class="container">
+        <div class="card-deck pb-5">
+                <a class="card device-card device pennylane qubit stochastic exact" href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.plugins.default_qubit.DefaultQubit.html">
+                    <h4 class="card-header peach-gradient">
+                        default.qubit
+                        <img class="img-fluid plugin-logo" src="img/pennylane_stacked.png" style="max-width: 20%;">
+                    </h4>
+                    <div class="card-body">
+                        <p class="card-text">
+                        A simple state-vector qubit simulator written in Python.
+                        <br><br>A good choice for optimizations with a moderate number of qubits and parameters.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                        <b>Plugin:</b> PennyLane (default)
+                        <br><b>Model:</b> Qubit
+                        <br><b>Type:</b> Simulator
+                        <br><b>Mode:</b> Stochastic or exact
+                        </small>
+                    </div>
+                </a>
+                <a class="card device-card device pennylane cv stochastic exact" href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.plugins.default_gaussian.DefaultGaussian.html">
+                    <h4 class="card-header peach-gradient">
+                        default.gaussian
+                        <img class="img-fluid plugin-logo" src="img/pennylane_stacked.png" style="max-width: 20%;">
+                    </h4>
+                    <div class="card-body">
+                        <p class="card-text">
+                        A simple quantum photonic simulator written in Python.
+                        <br><br>A good choice for optimizating photonic systems.
+                        </p>
+                       </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                        <b>Plugin:</b> PennyLane (default)
+                        <br><b>Model:</b> CV
+                        <br><b>Type:</b> Simulator
+                        <br><b>Mode:</b> Stochastic or exact
+                        </small>
+                    </div>
+                </a>
+                <a class="card device-card device pennylane qubit stochastic exact" href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.plugins.default_qubit_tf.DefaultQubitTf.html">
+                    <h4 class="card-header peach-gradient">
+                        default.qubit.tf
+                        <img class="img-fluid plugin-logo" src="img/pennylane_stacked.png" style="max-width: 20%;">
+                    </h4>
+                    <div class="card-body">
+                        <p class="card-text">
+                        A state-vector qubit simulator written using TensorFlow and supporting classical backpropagation.
+                        <br><br>A good choice when the number of parameters to be optimized is large.
+                        </p>
+                        </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                        <b>Plugin:</b> PennyLane (default)
+                        <br><b>Model:</b> Qubit
+                        <br><b>Type:</b> Simulator
+                        <br><b>Mode:</b> Stochastic or exact
+                        </small>
+                    </div>
+                </a>
+               <a class="card device-card device qiskit qubit stochastic" href="https://pennylaneqiskit.readthedocs.io/en/latest/devices/aer.html">
+                    <h4 class="card-header peach-gradient">
+                        qiskit.aer
+                        <img class="img-fluid plugin-logo" src="img/qiskit_logo.png" style="max-width: 20%;">
+                    </h4>
+                    <div class="card-body">
+                        <p class="card-text">
+                        The Aer device does ABC
+                        </p>
+                        </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                        <b>Plugin:</b> Qiskit
+                        <br><b>Model:</b> Qubit
+                        <br><b>Type:</b> Simulator
+                        <br><b>Mode:</b> Stochastic
+                        </small>
+                    </div>
+                </a>
+                <a class="card device-card device qiskit qubit stochastic" href="https://pennylaneqiskit.readthedocs.io/en/latest/devices/ibmq.html">
+                    <h4 class="card-header peach-gradient">
+                        qiskit.ibmq
+                        <img class="img-fluid plugin-logo" src="img/qiskit_logo.png" style="max-width: 20%;">
+                    </h4>
+                    <div class="card-body">
+                        <p class="card-text">
+                        The Ibmq is a hardware device...
+                        </p>
+                        </div>
+                    <div class="card-footer">
+                        <small class="text-muted">
+                        <b>Plugin:</b> Qiskit
+                        <br><b>Model:</b> Qubit
+                        <br><b>Type:</b> Hardware
+                        <br><b>Mode:</b> Stochastic
+                        </small>
+                    </div>
+                </a>
+        </div>
+        </div>
+    </div>
+    <br style="clear:both;"/>
+
+
+</div>
+
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+{% endblock %}

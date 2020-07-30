@@ -162,6 +162,9 @@ h5 {
     background-color: inherit;
 }
 
+.aside {
+    float: left;
+}
 /*=============================================================================*/
 
 /* Footer */
@@ -200,6 +203,7 @@ footer.page-footer .footer-copyright {
 
 /* Cards */
 .card {
+    margin: 20px;
     box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, .05), 0 2px 25px 2px rgba(0, 0, 0, .2) !important;
     border: 0;
     border-radius: 10px !important;
@@ -232,6 +236,10 @@ h4.card-title {
     margin-top: 0;
 }
 
+.card-deck{
+    bottom-margin: 10px;
+}
+
 .plugin-card {
     position: relative;
     background-image: none;
@@ -256,6 +264,39 @@ h4.card-title {
 }
 
 .plugin-card .plugin-logo {
+    height: 35px;
+    width: unset;
+    right: 20px;
+    position: absolute;
+    top: 14px;
+}
+
+.device-card {
+    position: relative;
+    background-image: none;
+    z-index: 1;
+    min-width: 250px;
+    max-width: 250px;
+    transition-duration: 0.4s;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.05),0 2px 25px 2px rgba(0,0,0,.05) !important;
+}
+
+.device-card:hover {
+    transition-duration: 0.4s;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .05), 0 2px 25px 2px rgba(0, 0, 0, .15) !important;
+}
+
+.device-card img {
+    max-width: 60%;
+}
+
+.device-card .card-header {
+    margin-top: 0px;
+    padding-top: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.device-card .plugin-logo {
     height: 35px;
     width: unset;
     right: 20px;
