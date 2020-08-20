@@ -25,17 +25,19 @@
                     <div class="card-body">
                         <p class="card-text">
                             A simple state-vector qubit simulator written in Python.
-                            <br><br>A good choice for optimizations with a moderate number of qubits and parameters.
+                            <br><br>A good choice for optimizations with a moderate number of qubits and parameters, and stochastic
+                            expectation values.
                         </p>
                     </div>
                 </a>
             </div>
             <div class="card plugin-card">
                 <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.devices.default_qubit_tf.DefaultQubitTF.html">
-                    <h4 class="card-header juicy-peach-gradient">default.qubit.tf</h4>
+                    <h4 class="card-header juicy-peach-gradient">default.qubit.tf<br> default.qubit.autograd</h4>
                     <div class="card-body">
                         <p class="card-text">
-                            A state-vector qubit simulator written using TensorFlow and supporting classical backpropagation. <br><br>A good choice when the number of parameters to be optimized is large.
+                            State-vector qubit simulators written using TensorFlow/Autograd and supporting classical backpropagation. <br>
+                            <br>A good choice when the number of parameters to be optimized is large, and expectation values are exact.
                         </p>
                     </div>
                 </a>
@@ -46,7 +48,8 @@
                     <div class="card-body">
                         <p class="card-text">
                             A fast state-vector qubit simulator written with a C++ backend.
-                            <br><br>A good choice for optimizations with a moderate number of qubits and parameters.
+                            <br><br>A good choice for optimizations with a moderate number of qubits and parameters, and stochastic
+                            expectation values.
                         </p>
                     </div>
                 </a>
@@ -111,15 +114,12 @@
                         pyQuil and the Forest SDK are an open-source quantum software framework designed by Rigetti. Supported hardware backends include the Rigetti Aspen QPU.</p>
                 </div>
             </a>
-            <a class="card plugin-card" href="https://pennylane-qsharp.readthedocs.io">
-                <h4 class="card-header weird-blue-gradient">
-                    Microsoft QDK
-                    <img class="img-fluid plugin-logo" src="img/qsharp.png" style="max-height: 25px">
-                </h4>
+            <a class="card plugin-card" href="https://pennylane-qulacs.readthedocs.io">
+                <h4 class="card-header weird-blue-gradient">Qulacs</h4>
                 <div class="card-body">
                     <p class="card-text">
-                        Microsoft QDK is a library for quantum programming using the .NET Q# quantum programming language.
-                        Provides access to the QDK full state simulator to be used with PennyLane.
+                        Qulacs is a high-performance quantum circuit simulator for simulating large, noisy or parametric quantum circuits.
+                        Implemented in C/C++ and with python interface, Qulacs achieved both high speed circuit simulation and high usability.
                     </p>
                 </div>
             </a>
@@ -173,7 +173,21 @@
                     </p>
                 </div>
             </a>
-            <!-- <div class="card hidden-card"></div> -->
+        </div>
+        <div class="card-deck mt-3">
+            <a class="card plugin-card" href="https://pennylane-qsharp.readthedocs.io">
+                <h4 class="card-header weird-blue-gradient">
+                    Microsoft QDK
+                    <img class="img-fluid plugin-logo" src="img/qsharp.png" style="max-height: 25px">
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        Microsoft QDK is a library for quantum programming using the .NET Q# quantum programming language.
+                        Provides access to the QDK full state simulator to be used with PennyLane.
+                    </p>
+                </div>
+            </a>
+            <div class="card hidden-card"></div>
         </div>
     </div>
 
@@ -182,14 +196,6 @@
         <p>In addition to the offical plugins, there are a wide range of plugins created by the PennyLane community.</p>
         <p><em>To write your own PennyLane-compatible plugin, the best place to start is our overview of the <a href="https://pennylane.readthedocs.io/en/stable/development/plugins.html">plugin API</a>. Have a plugin you would like to have listed here? Let us know at <a href="mailto:software@xanadu.ai">software@xanadu.ai</a>.</em></p>
         <div class="card-deck mt-5 mb-4">
-            <a class="card plugin-card" href="https://pennylane-qulacs.readthedocs.io">
-                <h4 class="card-header spring-warmth-gradient">Qulacs</h4>
-                <div class="card-body">
-                    <p class="card-text">
-                        Qulacs is a high-performance quantum circuit simulator for simulating large, noisy or parametric quantum circuits. Implemented in C/C++ and with python interface, Qulacs achieved both high speed circuit simulation and high usability.
-                    </p>
-                </div>
-            </a>
             <a class="card plugin-card" href="https://github.com/synqs/pennylane-ls">
                 <h4 class="card-header spring-warmth-gradient">
                     Labscript
