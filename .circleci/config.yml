@@ -79,7 +79,7 @@ jobs:
       - deploy:
           name: Deploy to AWS S3
           command: |
-            aws s3 sync site s3://pennylane.ai-dev
+            aws s3 sync site s3://pennylane.ai-prod
 
       # - run:
       #     name: Invalidate CloudFront
