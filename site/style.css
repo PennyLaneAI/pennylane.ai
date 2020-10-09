@@ -25,6 +25,10 @@ body {
   max-width: 1200px;
 }
 
+.wide-container {
+  width: 150%;
+  margin-left: -200px;
+}
 
 a {
   color: #2a6496;
@@ -335,6 +339,17 @@ pre {
 /*=============================================================================*/
 
 /* Responsiveness */
+
+
+
+@media screen and (max-width: 1200px){
+  .wide-container {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
+
 @media screen and (max-width:768px) {
     body {
         padding: 0px;
