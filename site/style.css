@@ -25,6 +25,10 @@ body {
   max-width: 1200px;
 }
 
+.wide-container {
+  width: 150%;
+  margin-left: -200px;
+}
 
 a {
   color: #2a6496;
@@ -91,6 +95,11 @@ h5 {
     max-width: 1000px;
     width: 100%;
 }
+
+.first-logo {
+    margin-left: -100px;
+}
+
 
 
 .parallax {
@@ -400,6 +409,22 @@ pre {
 /*=============================================================================*/
 
 /* Responsiveness */
+
+
+
+@media screen and (max-width: 1200px){
+  .wide-container {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+    .first-logo {
+        margin-left: unset;
+    }
+}
+
 @media screen and (max-width:768px) {
     body {
         padding: 0px;
