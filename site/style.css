@@ -207,14 +207,17 @@ h5 {
 }
 
 .news ul {
-  float: left;
   padding-left: 20px;
   font-weight: 300;
   animation: ticker 12s cubic-bezier(1, 0, .5, 0) infinite;
   -webkit-user-select: none
 }
 
-.news ul li {line-height: 35px; list-style: none }
+.news ul li {
+    line-height: 35px;
+    list-style: none;
+    white-space: nowrap;
+}
 
 .news ul li a {
   font-weight: 400;
@@ -478,5 +481,4 @@ pre {
     footer.page-footer .footer-copyright {
         font-size: x-small;
     }
-
 }
