@@ -2,7 +2,8 @@
     ('/qml', 'qml', 'Quantum machine learning'),
     ('install.html', 'install', 'Install'),
     ('plugins.html', 'plugins', 'Plugins'),
-    ('https://pennylane.readthedocs.io', 'docs', 'Documentation')
+    ('https://pennylane.readthedocs.io', 'docs', 'Documentation'),
+    ('https://qhack.ai', 'qhack', '<img src="img/qhack_plain_black.png">')
 ] -%}
 
 {% set active_page = active_page|default("none") -%}
@@ -30,7 +31,7 @@
         <ul class="navbar-nav mr-auto">
             {% for href, id, caption in navigation_bar %}
                 <li class="nav-item{% if id == active_page %} active{% endif %}">
-                    <a class="nav-link" href="{{ href|e }}">{{ caption|e }}</a>
+                    <a class="nav-link" href="{{ href|e }}">{{ caption }}</a>
                 </li>
             {% endfor %}
         </ul>
