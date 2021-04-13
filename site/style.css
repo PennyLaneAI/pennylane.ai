@@ -360,6 +360,16 @@ pre {
     }
 }
 
+@media (max-width: 976px) {
+  .top-nav-collapse .nav-item:hover:after, .top-nav-collapse .nav-item.active:after {
+      border-bottom: 0px;
+  }
+
+  .nav-item:hover:after, .nav-item.active:after {
+      border-bottom: 0px;
+  }
+}
+
 @media screen and (max-width:768px) {
     body {
         padding: 0px;
