@@ -51,7 +51,7 @@ cd pennylane
 pip install -e .
                 </code>
             </pre>
-            <p><i>Note: if installing from source for development, changes to the plugins module will require </i><code>pip install -e .</code><i> to be re-run to take effect.</i></p>
+            <p><i>Note: if installing from source for development, changes to plugin device registration will require </i><code>pip install -e .</code><i> to be re-run to take effect.</i></p>
         </div>
     </div>
 
@@ -123,8 +123,14 @@ pip install -e .
             </label>
             <label class="nav-item">
                 <a class="nav-link" id="tf">
-                    <input type="checkbox" pip="tensorflow>=1.13.2">
+                    <input type="checkbox" pip="&quot;tensorflow>=1.13.2&quot;">
                     <span>TensorFlow</span>
+                </a>
+            </label>
+            <label class="nav-item">
+                <a class="nav-link" id="jax">
+                    <input type="checkbox" pip="jax jaxlib">
+                    <span>JAX</span>
                 </a>
             </label>
             <label class="nav-item">
