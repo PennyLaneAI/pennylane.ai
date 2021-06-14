@@ -5,6 +5,7 @@
 {% endblock %}
 <div class="parallax" style="background-image: url('img/xanadu-background.png'); box-shadow: none;">
     <div class="container">
+
         <div class="mt-5 pt-5 text-center teal-text text-lighten-2">
             <a href="https://xanadu.ai">
                 <img src="img/logo_new_small.png" class="mb-5" width=200px></img>
@@ -94,6 +95,14 @@
                 </a>
             </div>
         </div>
+
+        <div id="latest-news" class="pb-5 d-none">
+          <h3>Latest News</h3>
+          <div class="news text-left">
+            <ul class="news__item-list"></ul>
+          </div>
+        </div>
+
     </div>
 </div>
 <div class="parallax" style="background-image: url('img/chip.jpg');">
@@ -234,6 +243,64 @@
     <div class="view mask py-5 rgba-grey-slight" style="min-height: 400px;">
     </div>
 </div>
+
+<script>
+window.addEventListener('load', function() {
+    fetch('http://www.feedrapp.info?q=https://pennylane.ai/blog/feeds/rss.xml&num=3')
+        .then(function(response) { return response.json() })
+        .then(function(body) {
+            if (body.responseStatus === 200) {
+                var monthMap = {
+                  1: 'January',
+                  2: 'February',
+                  3: 'March',
+                  4: 'April',
+                  5: 'May',
+                  6: 'June',
+                  7: 'July',
+                  8: 'August',
+                  9: 'September',
+                  10: 'October',
+                  11: 'November',
+                  12: 'December'
+                }
+                var latestBlogs = body.responseData.feed.entries;
+                var $newsSection = document.querySelector('#latest-news');
+                var $newsItemsList = $newsSection.querySelector('.news__item-list');
+
+                latestBlogs.forEach(function(blog) {
+                    var $newsItem = document.createElement('li');
+                    $newsItem.className = 'news-item';
+
+                    var $newsItemDate = document.createElement('time');
+                    $newsItemDate.className = 'news-item__date';
+                    $newsItemDate.setAttribute('datetime', blog.publishedDate);
+
+                    var date = new Date(blog.publishedDate);
+                    $newsItemDate.innerText = monthMap[date.getMonth() + 1] + ' ' + date.getDate() + ', ' + date.getFullYear();
+
+                    var $newsItemLink = document.createElement('a');
+                    $newsItemLink.className = 'news-item__link';
+                    $newsItemLink.setAttribute('href', blog.link);
+                    $newsItemLink.setAttribute('target', '_blank');
+                    $newsItemLink.setAttribute('rel', 'noopener noreferrer');
+                    $newsItemLink.innerText = blog.title;
+
+                    $newsItem.appendChild($newsItemDate);
+                    $newsItem.appendChild($newsItemLink);
+
+                    $newsItemsList.appendChild($newsItem);
+                });
+
+                $newsSection.classList.remove('d-none');
+            }
+        })
+        .catch(function(err) {
+            console.log(err);
+        });
+});
+</script>
+
 {% block footer %}
 {% include "footer.html" %}
 {% endblock %}
