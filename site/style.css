@@ -250,7 +250,7 @@ h5 {
     80% { top: -160px; }
 
     95% { top: -160px; }
-    97% {visibility: hidden; }
+    97% { visibility: hidden; }
     99% { top: -200px; }
     100% { top: 40px; visibility: hidden; }
 }
