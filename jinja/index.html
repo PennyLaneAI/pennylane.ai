@@ -246,7 +246,7 @@
 
 <script>
 window.addEventListener('load', function() {
-    fetch('http://www.feedrapp.info?q=https://pennylane.ai/blog/feeds/rss.xml&num=5')
+    fetch('https://www.feedrapp.info?q=https://pennylane.ai/blog/feeds/rss.xml&num=5')
         .then(function(response) { return response.json() })
         .then(function(body) {
             if (body.responseStatus === 200) {
