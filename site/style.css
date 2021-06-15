@@ -210,8 +210,10 @@ h5 {
 
 .news-item__date {
     font-weight: bold;
-    color: #19b37b;
+    color: #2d7c7f;
     min-width: fit-content;
+    min-width: -moz-fit-content;
+    min-width: -webkit-fit-content;
 }
 
 .news-item__link, .news-item__link:hover {
