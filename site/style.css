@@ -173,7 +173,7 @@ h5 {
     background-color: #fefefe;
     box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, .05), 0 2px 25px 2px rgba(0, 0, 0, .2) !important;
     max-width: 100%;
-    height: 120px;
+    height: 40px;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -193,7 +193,7 @@ h5 {
     padding: 0;
     list-style: none;
     animation-name: ticker;
-    animation-duration: 12s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
     animation-fill-mode: both;
@@ -235,12 +235,20 @@ h5 {
 .news span:hover+ul { animation-play-state: paused }
 
 @keyframes ticker {
-    0% { top: 120px; visibility: visible; }
-    33% { top: 0px; }
-    66% { top: -120px; }
-    96% { top: -240px; visibility: hidden; }
-    98% { top: -360px; }
-    100% { top: 120px; visibility: hidden; }
+    0% { top: 40px; visibility: visible; }
+    5% { top: 0; }
+    15% { top: 0; }
+    20% { top: -40px; }
+    35% { top: -40px; }
+    40% { top: -80px; }
+    55% { top: -80px; }
+    60% { top: -120px; }
+    75% { top: -120px; }
+    80% { top: -160px; }
+    95% { top: -160px; }
+    97% { visibility: hidden; }
+    99% { top: -200px; }
+    100% { top: 40px; visibility: hidden; }
 }
 
 /*=============================================================================*/
