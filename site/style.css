@@ -110,6 +110,15 @@ h5 {
     box-shadow: -1px 14px 30px -20px rgba(0,0,0,0.3);
 }
 
+.navbar-brand {
+  padding-bottom: 0px;
+}
+
+.navbar .nav-item .nav-link .fab, .navbar .nav-item .nav-link .far, .navbar .nav-item .nav-link .fas {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .navbar-nav {
     padding-bottom: 1px;
 }
@@ -120,7 +129,7 @@ h5 {
     font-size: initial;
     color: black;
     font-family: 'Noto Sans', 'Roboto', sans-serif !important;
-    margin-bottom: -8px;
+    margin-bottom: -9px;
     border-bottom: 3px solid;
     border-bottom-color: white;
 }
@@ -145,7 +154,7 @@ h5 {
     content: "";
     border-bottom-color: #19b37b;
     position: absolute;
-    bottom: -10px;
+    bottom: -3px;
     width: 80%;
     left: 10%;
     transition: .5s ease-in-out,padding .5s ease-in-out
