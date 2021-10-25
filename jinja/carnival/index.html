@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block navbar %}
+{#{% include "navbar.html" %}#}
+{% endblock %}
+<div class="parallax" style="background-image: url('../img/xanadu-background.png'); box-shadow: none;">
+    <div class="container">
+
+        <div class="mt-5 pt-5 text-center teal-text text-lighten-2">
+            <img src="../img/carnival_splash.png" class="logo"></img>
+        </div>
+        <div class="row text-center">
+            <h3 class="col-12 mt-5 mb-5 grey-text" style="font-family: 'Roboto', sans-serif !important;">How to participate</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 mb-5">
+                <a href="https://pennylane.ai/qml">
+                    <div class="card card-image" style="background-image: url(../img/learn.png); background-size: cover;">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+                            <div>
+
+				 <div class="m-3 card-image">
+				         <img width="300px" src="../img/tickets.png" />
+				 </div>  
+				                             
+                                <h3 class="card-title">
+                                    <strong>Sign up</strong>
+                                </h3>
+
+                                <p class="mb-1 black-text px-3">Register to our Scavenger Hunt, which will allow you to collect tickets that can be exchanged for prizes. All you need is an email.</p>
+                                <div class="white-text d-flex justify-content-center">
+                                    <h5>Register now <i class="fas fa-angle-double-right"></i></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <a href="https://pennylane.ai/qml/demonstrations.html">
+                    <div class="card card-image" style="background-image: url(../img/blackbird.jpg);">
+                        <div class="text-center d-flex align-items-center mask rgba-white-strong">
+                            <div>
+                                
+				 <div class="m-3 card-image">
+				         <img width="300px" src="../img/tickets.png" />
+				 </div>  
+                                
+                                <h3 class="card-title"></i>
+                                    <strong>Participate in events</strong>
+                                </h3>
+                                
+                                <p class="mb-1 black-text px-3">Attend our live events, participate in the competitions and check out our Carnival releases to win tickets.
+</p>
+                                <div class="white-text d-flex justify-content-center">
+                                    <h5>Attraction calendar <i class="fas fa-angle-double-right"></i></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <a href="calendar.html">
+                    <div class="card card-image" style="background-image: url(../img/qhack.png); background-size: cover;">
+                        <div class="text-center d-flex align-items-center mask"  style="background-color: rgba(236, 221, 234, 0.8)">
+                            <div style="width: 100%; min-height: 198px;">
+
+				 <div class="m-3 card-image">
+				         <img width="300px" src="../img/tickets.png" />
+				 </div>  
+				 
+                                <h3 class="card-title"></i>
+                                    <strong>Collect tickets</strong>
+                                </h3>
+                                
+                                <p class="mb-1 black-text px-3">Attend our live events, participate in the competitions and check out our Carnival releases to win tickets.
+</p>
+                                <div class="white-text d-flex justify-content-center" style="margin-top: 24px;">
+                                    <h5>Collect tickets <i class="fas fa-angle-double-right"></i></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div id="latest-news" class="pb-5 d-none">
+          <h3 class="mb-3 mt-0">Latest Blog Posts</h3>
+          <div class="news text-left">
+            <ul class="news__item-list"></ul>
+          </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+{% endblock %}

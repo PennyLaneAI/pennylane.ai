@@ -125,13 +125,21 @@ def render_templates():
                            "hardware devices, alongside TensorFlow or PyTorch, in a single computation.",
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
         },
-        "carnival.html": {
+        "carnival/index.html": {
             "carnival_page": True,
             "title": "PennyLane Quantum Carnival",
-            "canonical_url": "https://pennylane.ai/carnival.html",
+            "canonical_url": "https://pennylane.ai/carnival/index.html",
             "description": "Join us for the PennyLane Quantum Carnival, "
                            "running throughout the month of November 2021.",
-            "thumbnail": "https://pennylane.ai/img/thumbnail.png",
+            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+        },
+        "carnival/calendar.html": {
+            "calendar_page": True,
+            "title": "PennyLane Quantum Carnival &#8212; Calendar",
+            "canonical_url": "https://pennylane.ai/carnival/index.html",
+            "description": "Check out all the events taking place in "
+                           "the PennyLane Quantum Carnival during November 2021.",
+            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
         },
     }
 
