@@ -125,6 +125,14 @@ def render_templates():
                            "hardware devices, alongside TensorFlow or PyTorch, in a single computation.",
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
         },
+        "carnival.html": {
+            "carnival_page": True,
+            "title": "PennyLane Quantum Carnival",
+            "canonical_url": "https://pennylane.ai/carnival.html",
+            "description": "Join us for the PennyLane Quantum Carnival, "
+                           "running throughout the month of November 2021.",
+            "thumbnail": "https://pennylane.ai/img/thumbnail.png",
+        },
     }
 
     for file in files:
