@@ -3,99 +3,152 @@
 {% block navbar %}
 {% include "navbar.html" %}
 {% endblock %}
-<div class="parallax" style="background-image: url('img/xanadu-background.png'); box-shadow: none;">
+<div class="parallax" style="background-image: url('../img/xanadu-background.png'); box-shadow: none;">
     <div class="container">
 
-        <div class="mt-5 pt-5 text-center teal-text text-lighten-2">
-            <a href="https://xanadu.ai">
-                <img src="img/logo_new_small.png" class="mb-5" width=200px></img>
-            </a>
-            <img src="img/pennylane_stacked.png" class="logo" srcset="img/pennylane_stacked.png 800w, img/pennylane_thin.png 1500w"></img>
-        </div>
-        <div class="row text-center">
-            <h3 class="col-12 mt-5 mb-5 grey-text" style="font-family: 'Roboto', sans-serif !important;">A cross-platform Python library for differentiable programming of quantum computers. Train a quantum computer the same way as a neural network.</h3>
-        </div>
-
-        <div class="row pb-5 align-items-center justify-content-center">
-            <div class="m-3 card-image">
-                <a target="_blank"
-                   href="https://hacktoberfest.digitalocean.com/">
-                    <img width="200px" src="img/Hacktoberfest_Wallpaper_desktop-02.png" />
-                </a>
-            </div>
-            <div class="m-3 text-center align-items-center">
-                <h3 class="card-title"></i>
-                    <strong>PennyLane is participating in Hacktoberfest!</a></strong>
-                </h3>
-                <p class="black-text">
-                    <br>Join us on GitHub on October 1st-31st. Contibute with at least 4 approved
-                    <br>pull requests in participating projects and register on the   
-                    <br>Hacktoberfest website to get the chance to win a t-shirt or plant a tree!
-                </p>
-                <h5>
-                    <a class="black-text" target="_blank"
-                        href="https://hacktoberfest.digitalocean.com/">
-                        Hacktoberfest <i class="fas fa-angle-double-right"></i>
-                    </a>
-                </h5>
-
-            </div>
-        </div>
-
         <div class="row">
-            <div class="col-lg-4 mb-5">
-                <a href="https://pennylane.ai/qml">
-                    <div class="card card-image" style="background-image: url(img/learn.png); background-size: cover;">
+            <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/learn.png); background-size: cover;">
                         <div class="text-center d-flex align-items-center rgba-white-strong mask">
-                            <div>
-                                <h3 class="card-title">
-                                    <strong>Learn</strong>
-                                </h3>
-                                <p class="mb-1 black-text px-3">Sit back and learn about the field of quantum machine learning, explore key concepts, and view our selection of curated videos.</p>
-                                <div class="white-text d-flex justify-content-center">
-                                    <h5>Quantum machine learning <i class="fas fa-angle-double-right"></i></h5>
-                                </div>
-                            </div>
+                        
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col-8 col-sm-6">
+					    <div class="col-lg-1 offset-lg-3 text-center mb-3">
+					      <i class="fas fa-ticket-alt fa-5x"></i>
+					    </div>
+				      </div>
+				      <div class="col-4 col-sm-6">
+					<h3 class="card-title"></i>
+					    <strong>Scavenger Hunt</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 1-30</h5>
+				  </div>
+
                         </div>
                     </div>
-                </a>
             </div>
-            <div class="col-lg-4 mb-5">
-                <a href="https://pennylane.ai/qml/demonstrations.html">
-                    <div class="card card-image" style="background-image: url(img/blackbird.jpg);">
-                        <div class="text-center d-flex align-items-center mask rgba-white-strong">
-                            <div>
-                                <h3 class="card-title"></i>
-                                    <strong>Play</strong>
-                                </h3>
-                                <p class="mb-1 black-text px-3">Tutorials to introduce core QML concepts, including quantum nodes, optimization, and devices, via easy-to-follow examples.</p>
-                                <div class="white-text d-flex justify-content-center">
-                                    <h5>Demos <i class="fas fa-angle-double-right"></i></h5>
-                                </div>
-                            </div>
+           <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/learn.png); background-size: cover;">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+                        
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col-8 col-sm-6">
+					    <div class="col-lg-1 offset-lg-3 text-center mb-3">
+					      <i class="fas fa-palette fa-5x"></i>
+					    </div>
+				      </div>
+				      <div class="col-4 col-sm-6">
+					<h3 class="card-title"></i>
+					    <strong>Talent Show</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 1-30</h5>
+				  </div>
+
                         </div>
                     </div>
-                </a>
             </div>
-            <div class="col-lg-4 mb-5">
-                <a href="https://qhack.ai">
-                    <div class="card card-image" style="background-image: url(img/qhack.png); background-size: cover;">
-                        <div class="text-center d-flex align-items-center mask"  style="background-color: rgba(236, 221, 234, 0.8)">
-                            <div style="width: 100%; min-height: 198px;">
-                                <h3 class="card-title"></i>
-                                    <strong>Hack</strong>
-                                </h3>
-                                <!-- <img src="img/qhack_logo.png" style="margin-top: 40px;" width="200px"/> -->
-                                <p class="mb-1 black-text px-3">Join us for QHACK, the quantum machine learning hackathon. Feb 17-26th 2021.</p>
-                                <div class="white-text d-flex justify-content-center" style="margin-top: 24px;">
-                                    <h5>Sign up <i class="fas fa-angle-double-right"></i></h5>
-                                </div>
-                            </div>
+           <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/learn.png); background-size: cover;">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+                        
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col-8 col-sm-6">
+					    <div class="col-lg-1 offset-lg-3 text-center mb-3">
+					      <i class="fas fa-microphone-alt fa-5x"></i>
+					    </div>
+				      </div>
+				      <div class="col-4 col-sm-6">
+					<h3 class="card-title"></i>
+					    <strong>Trivia Party</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 1-30</h5>
+				  </div>
+
                         </div>
                     </div>
-                </a>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/learn.png); background-size: cover;">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+                        
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col-8 col-sm-6">
+					    <div class="col-lg-1 offset-lg-3 text-center mb-3">
+					      <i class="fas fa-laptop-code fa-5x"></i>
+					    </div>
+				      </div>
+				      <div class="col-4 col-sm-6">
+					<h3 class="card-title"></i>
+					    <strong>Coding Challenges</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 1-30</h5>
+				  </div>
+
+                        </div>
+                    </div>
+            </div>
+           <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/learn.png); background-size: cover;">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+                        
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col-8 col-sm-6">
+					    <div class="col-lg-1 offset-lg-3 text-center mb-3">
+					      <i class="fas fa-trophy fa-5x"></i>
+					    </div>
+				      </div>
+				      <div class="col-4 col-sm-6">
+					<h3 class="card-title"></i>
+					    <strong>Prize Winners</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 1-30</h5>
+				  </div>
+
+                        </div>
+                    </div>
+            </div>
+           <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/learn.png); background-size: cover;">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+                        
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col-8 col-sm-6">
+					    <div class="col-lg-1 offset-lg-3 text-center mb-3">
+					      <i class="fas fa-bullhorn fa-5x"></i>
+					    </div>
+				      </div>
+				      <div class="col-4 col-sm-6">
+					<h3 class="card-title"></i>
+					    <strong>Special Announcements</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 1-30</h5>
+				  </div>
+
+                        </div>
+                    </div>
+            </div>
+        </div>        
+        
 
         <div id="latest-news" class="pb-5 d-none">
           <h3 class="mb-3 mt-0">Latest Blog Posts</h3>
@@ -106,201 +159,7 @@
 
     </div>
 </div>
-<div class="parallax" style="background-image: url('img/chip.jpg');">
-    <div class="mask rgba-stylish-slight pt-5">
-        <div class="text-center pb-5">
-            <h5 class="white-text" style="font-family: 'Roboto', sans-serif !important;">PennyLane supports a growing ecosystem, including a wide range of quantum hardware and machine learning libraries</h5>
-        </div>
-        <table class="container">
-            <tr class="row text-center justify-content-center">
-                <td class="col-12 col-md-12 col-lg-3 mb-3 first-logo">
-                    <a href="https://xanadu.ai/">
-                        <img class="img-responsive" src="img/xanadu_dark.png" style="max-width: 300px;"></img>
-                    </a>
-                </td>
-                <td class="col-12 col-md-12 col-lg-2 mb-3">
-                    <a href="https://amazon-braket-pennylane-plugin-python.readthedocs.io" class="align-middle">
-                        <img class="img-responsive" src="img/AWS-Logo_png/AWS_logo_banner.png" style="max-width: 180px;"></img>
-                    </a>
-                </td>
-                <td class="col-12 col-md-12 col-lg-2 mb-3">
-                    <a href="https://pennylaneqiskit.readthedocs.io" class="align-middle">
-                        <img class="img-responsive" src="img/ibm.png" style="max-width: 140px;"></img>
-                    </a>
-                </td>
-                <td class="col-12 col-md-12 col-lg-3 mb-3">
-                    <a href="https://pennylane-cirq.readthedocs.io">
-                        <img class="img-responsive" src="img/google-dark.png" style="max-width: 200px;"></img>
-                    </a>
-                </td>
-                <td class="col-12 col-md-12 col-lg-1 mb-3">
-                    <a href="https://github.com/rigetti/pennylane-forest/">
-                        <img class="img-responsive" src="img/rigetti.png" style="max-width: 170px;"></img>
-                    </a>
-                </td>
-            </tr>
-            <tr class="row text-center justify-content-center">
-                <td class="col-12 col-md-12 col-lg-3 mb-5">
-                    <a href="https://pennylane-qsharp.readthedocs.io">
-                        <img class="img-responsive" src="img/microsoft.png" style="max-width: 220px;"></img>
-                    </a>
-                </td>
-                <td class="col-12 col-md-12 col-lg-2 mb-5">
-                    <a href="https://pennylane-orquestra.readthedocs.io" class="align-middle">
-                        <img class="img-responsive" src="img/zapata.png" style="max-width: 175px;"></img>
-                    </a>
-                </td>
-                <td class="col-12 col-md-12 col-lg-2 mb-5">
-                    <a href="https://pennylane-aqt.readthedocs.io">
-                        <img class="img-responsive" src="img/aqt_big_transparent.png" style="max-width: 125px;"></img>
-                    </a>
-                </td>
-                <td class="col-12 col-md-12 col-lg-2 mb-5">
-                    <a href="https://pennylane-ionq.readthedocs.io">
-                        <img class="img-responsive" src="img/ionq_logo.png" style="max-width: 150px;"></img>
-                    </a>
-                </td>
-            </tr>
-            <tr class="row text-center justify-content-center">
-                <td class="col-12 col-md-12 col-lg-3 mb-5">
-                    <a href="https://www.tensorflow.org/">
-                        <img class="img-responsive" src="img/tf.png" style="max-width: 250px;"></img>
-                    </a>
-                </td>
-                <td class="col-12 col-md-12 col-lg-3 mb-5">
-                    <a href="http://www.pytorch.org/">
-                        <img class="img-responsive" src="img/pytorch_dark.png" style="max-width: 220px"></img>
-                    </a>
-                </td>
-                <td class="col-12 col-md-12 col-lg-2 mb-5">
-                    <a href="https://www.numpy.org/">
-                        <img class="img-responsive" src="img/numpy.png" style="max-width: 150px;"></img>
-                    </a>
-                </td>
-                <td class="col-12 col-md-12 col-lg-2 mb-5">
-                    <a href="https://github.com/google/jax">
-                        <img class="img-responsive" src="img/jax.png" style="max-width: 100px"></img>
-                    </a>
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
-<div class="container my-5">
-    <div class="text-center">
-        <h1>Features</h1>
-    </div>
-    <!-- Grid row -->
-    <div class="row">
-        <!-- Grid column -->
-        <div class="col-md-4">
-            <!-- <div class="card py-4 px-4"> -->
-            <div class="card-title text-center">
-                <img class="img-fluid" src="img/calculator.svg" width="70px"></img><br>
-                <h5>Follow the gradient</h5>
-            </div>
-            <p class="grey-text">The TensorFlow of quantum computing: built-in automatic differentiation of quantum circuits, using the near-term quantum devices directly. You can combine multiple quantum devices with classical processing arbitrarily!
-            </p>
-            <!-- </div> -->
-        </div>
-        <!-- Grid column -->
-        <!-- Grid column -->
-        <div class="col-md-4">
-            <!-- <div class="card py-4 px-4"> -->
-            <div class="card-title text-center">
-                <img class="img-fluid" src="img/globe.svg" width="70px"></img><br>
-                <h5>Makes PyTorch and TensorFlow quantum</h5>
-            </div>
-            <p class="grey-text">Support for hybrid quantum and classical models, and compatible with existing machine learning libraries. Quantum circuits can be set up to interface with either NumPy, PyTorch, JAX, or TensorFlow, allowing hybrid CPU-GPU-QPU computations.
-            </p>
-            <!-- </div> -->
-        </div>
-        <!-- Grid column -->
-        <!-- Grid column -->
-        <div class="col-md-4">
-            <!-- <div class="card py-4 px-4"> -->
-            <div class="card-title text-center">
-                <img class="img-fluid" src="img/chip.svg" width="70px"></img><br>
-                <h5>Access all the devices</h5>
-            </div>
-            <p class="grey-text">The same quantum circuit model can be run on different devices. Install plugins to run your computational circuits on more devices, including <a href="https://github.com/PennyLaneAI/pennylane-sf">Strawberry Fields</a>, <a href="https://github.com/aws/amazon-braket-pennylane-plugin-python/">Amazon Braket</a>, <a href="https://github.com/PennyLaneAI/pennylane-qiskit/">Qiskit and IBM Q</a>, <a href="https://github.com/PennyLaneAI/pennylane-cirq/">Google Cirq</a>, <a href="https://github.com/rigetti/pennylane-forest/">Rigetti Forest</a>, and <a href="https://github.com/PennyLaneAI/pennylane-qsharp">the Microsoft QDK</a>
-            </p>
-        </div>
-        <!-- </div> -->
-    </div>
-    <!-- Grid row -->
-    <!-- Grid row -->
-    <div class="row mt-5">
-        <!-- Grid column -->
-        <div class="col-12 col-md-4 col-lg-5">
-            <img class="img-fluid" src="img/code.png"></img>
-        </div>
-        <div class="col-12 col-md-8 col-lg-7">
-            <img class="img-fluid" src="img/header.png"></img>
-        </div>
-    </div>
-</div>
-<div class="parallax" style="background-image: url('img/banner.png'); background-size: cover; min-height: 400px;">
-    <div class="view mask py-5 rgba-grey-slight" style="min-height: 400px;">
-    </div>
-</div>
 
-<script>
-window.addEventListener('load', function() {
-    fetch('https://www.feedrapp.info?q=https://pennylane.ai/blog/feeds/rss.xml&num=5')
-        .then(function(response) { return response.json() })
-        .then(function(body) {
-            if (body.responseStatus === 200) {
-                var monthMap = {
-                  1: 'January',
-                  2: 'February',
-                  3: 'March',
-                  4: 'April',
-                  5: 'May',
-                  6: 'June',
-                  7: 'July',
-                  8: 'August',
-                  9: 'September',
-                  10: 'October',
-                  11: 'November',
-                  12: 'December'
-                }
-                var latestBlogs = body.responseData.feed.entries;
-                var $newsSection = document.querySelector('#latest-news');
-                var $newsItemsList = $newsSection.querySelector('.news__item-list');
-
-                latestBlogs.forEach(function(blog) {
-                    var $newsItem = document.createElement('li');
-                    $newsItem.className = 'news-item';
-
-                    var $newsItemDate = document.createElement('time');
-                    $newsItemDate.className = 'news-item__date';
-                    $newsItemDate.setAttribute('datetime', blog.publishedDate);
-
-                    var date = new Date(blog.publishedDate);
-                    $newsItemDate.innerText = monthMap[date.getMonth() + 1] + ' ' + date.getDate() + ', ' + date.getFullYear();
-
-                    var $newsItemLink = document.createElement('a');
-                    $newsItemLink.className = 'news-item__link';
-                    $newsItemLink.setAttribute('href', blog.link);
-                    $newsItemLink.setAttribute('target', '_blank');
-                    $newsItemLink.setAttribute('rel', 'noopener noreferrer');
-                    $newsItemLink.innerText = blog.title;
-
-                    $newsItem.appendChild($newsItemDate);
-                    $newsItem.appendChild($newsItemLink);
-
-                    $newsItemsList.appendChild($newsItem);
-                });
-
-                $newsSection.classList.remove('d-none');
-            }
-        })
-        .catch(function(err) {
-            console.log(err);
-        });
-});
-</script>
 
 {% block footer %}
 {% include "footer.html" %}
