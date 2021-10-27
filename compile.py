@@ -24,108 +24,38 @@ FAQ = [
         "..."
     ),
     (
-        "Does it cost anything to attend QHack?",
-        "No, attendance is FREE for everyone!"
-    ),
-    (
-        "What is the format for the hackathon?",
-        "The <a href=\"https://qhack.ai/hackathon.html\">hackathon</a> will consist of two stages. "
-        "In the <span style=\"font-weight: bold; font-style: italic;\">QML Challenge Board</span>, "
-        "you will tackle a set of quantum machine learning questions of various difficulty levels. "
-        "In the <span style=\"font-weight: bold; font-style: italic;\">QHack Open Hackathon</span>, teams will have one week to build a free-form "
-        "hackathon project. More details can be found <a href=\"https://github.com/XanaduAI/QHack2021\">here</a>. "
-    ),
-    (
         "Are there prizes?",
-        "Yes! Check <a href=\"https://qhack.ai/hackathon.html\">here</a> for an overview of the hackathon prizes and power ups."
+        "Absolutely! Check <a href=\"scavenger_hunt.html\">here</a> for more "
+        "details on prizes and how to win them."
     ),
     (
         "How do I know if I have been successfully registered?",
-        "Everyone who has submitted the registration form is on the attendees list. "
-        "There are no special acceptance criteria."
+        "Everyone who has submitted the registration form is registered. "
+        "There are no special criteria to participate."
     ),
     (
-        "How do I sign into the QML Challenge web portal?",
-        "The web portal can be accessed <a href=\"https://challenge.qhack.ai/\">here</a>. "
-        "You will need to register your Team in order to be able to submit your solutions "
-        "and claim your points. There can only be one account associated with each Team, "
-        "so if you're a Team of more than one person you should designate someone as Team Captain "
-        "to register on behalf of the Team and submit the Team's solutions."
+        "Do I need to register in order to participate in the Talent Show?",
+        "Yes, you will need to register in order to access the submission form "
+        "and get the chance to win a bucket of tickets."
     ),
     (
-        "My team name has already been taken! What do I do?",
-        "Team names are unique. The only way to guarantee your favourite name in the "
-        "QML Challenge web portal is to create an account and grab it early. "
-        "If your team has multiple members, check if one of your teammates has already "
-        "created an account."
+        "How do I get tickets in the Scavenger Hunt?",
+        "You can get tickets by attending our live events, participating in "
+        "the Talent Show, and if you search carefully, you can find many "
+        "other tickets hidden in secret places."
     ),
     (
-        "What is the maximum team size?",
-        "We recommend a maximum team size of 3 people. Teams of 4+ may also be acceptable, "
-        "but the CERN internship prize has a maximum of three positions available."
+        "How many events are there?",
+        "The main events are in the attraction calendar. Other announcements "
+        "will be made on the PennyLane Twitter account, so "
+        "<a href=\"https://twitter.com/intent/user?screen_name=pennylaneai\"follow us</a> "
+        "to stay informed."
     ),
     (
-        "Do I have to form a team?",
-        "No. Individuals can take part in the hackathon challenges independently. "
-        "There is no distinction on the scoreboard between teams of one or teams with multiple members. "
-        "Attendees can also choose to follow our livestream content without taking "
-        "on the hackathon challenges (though we encourage you to do so!)."
+        "How many tickets are there in total?",
+        "In total, there are 1000 unique points which can be won by earning "
+        "or finding tickets."
     ),
-    (
-        "How do I find a team?",
-        "Recruit friends, work colleagues, classmates, or put the call out in existing communities "
-        "such as the <a href=\"https://discuss.pennylane.ai\">PennyLane discussion forum</a>, "
-        "the <a href=\"https://xanadu-quantum.slack.com/\">Xanadu Slack</a>, "
-        "the <a href=\"https://discord.gg/JqVGmpkP96\">Unitary Fund Discord</a>, or "
-        "the <a href=\"https://qosf.slack.com\">QOSF Slack</a>."
-    ),
-    (
-        "What skill level do I need to have to participate?",
-        "We are aiming to offer something for everyone, from complete beginners "
-        "to seasoned experts. As part of the event, we will provide introductory tutorials for "
-        "quantum machine learning and for programming quantum computers."
-    ),
-    (
-        "What software do I need to use for the hackathon?",
-        "Our hackathon challenges will be based on <a href=\"https://pennylane.ai\">PennyLane</a> and "
-        "<a href=\"https://aws.amazon.com/braket\">Amazon Braket</a>."
-    ),
-    (
-        "Where can I get help with my AWS account or Amazon Braket?",
-        "We've set up two dedicated channels for AWS and Amazon Braket support on the <a href=\"https://join.slack.com/t/xanadu-quantum/shared_invite/zt-lxv8gwbp-e_KN6iXMfrxLoa26nPYzYg\">Xanadu Slack</a>. "
-        "For general AWS Support, submit questions to the <em>#aws-general-support</em> channel. " 
-        "For support questions specific to Amazon Braket please join the <em>#amazon-braket-support</em> channel."
-    ),
-    (
-        "Are there example challenge questions I can look at?",
-        "We will not be sharing specific example questions before the event. "
-        "To best prepare, the ideal source of example material is the PennyLane "
-        "<a href=\"https://pennylane.ai/qml\">QML website</a>."
-    ),
-    (
-        "What is the expected workload for completing the hackathon questions?",
-        "Multiple hackathon questions will be available, with different levels of difficulty. "
-        "It is up to you how much time you would like to put in; simply choose a question "
-        "to start with, and go from there! There is no requirement to answer every question."
-    ),
-    (
-        "When will my SWAG pack arrive?",
-        "We have provided SWAG packs to a limited number of early-bird attendees. "
-        "These were mailed out several weeks before the event. "
-        "While we hope that SWAG packs arrived in a timely manner, please note that "
-        "postal delays could cause packs to arrive later than expected."
-    ),
-    (
-        "How can I connect with others who are taking part in QHack?",
-        "For general discussion about QHack, join the <a href=\"https://join.slack.com/t/xanadu-quantum/shared_invite/zt-lxv8gwbp-e_KN6iXMfrxLoa26nPYzYg\">Xanadu Slack</a> "
-        "and introduce yourself on the <a href=\"https://xanadu-quantum.slack.com/archives/C01JZT78KC6\">#qhack channel</a>."
-    ),
-    (
-        "Will the talks be recorded and available later?",
-        "Yes. The talks will be available as videos-on-demand shortly after airing. "
-        "We will also be replaying some of the day's highlights starting at 9PM EST. "
-        "The talks will be re-posted on other channels at a later time."
-    )
 ]
 
 
