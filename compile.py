@@ -10,71 +10,121 @@ def render_from_template(directory, template_name, **kwargs):
     return template.render(**kwargs)
 
 FAQ = [
-    (
-        "What is PennyLane?",
-        "PennyLane is a <b> software framework for differentiable quantum programming</b>, "
-        "similar to TensorFlow and PyTorch for classical computation. It facilitates the "
-        "training of variational quantum circuits."
+        (
+        "When will PennyLane Quantum Carnival take place?",
+        "November 1-30, 2021. "
     ),
     (
-        "Does PennyLane work with hardware?",
-        "Yes, PennyLane can be used to optimize quantum circuits running on hardware. "
-        "Simply choose a hardware backend as your device. You can find all available backends "
-        "in the <a href=\"plugins.html\">plugins</a> section."
+        "What is the schedule?",
+        "Check our our <a href=\"attractions.html\">attractions</a> page for more details."
+        "Also watch out for special announcements throughout the month."
     ),
     (
-         "Can I use PennyLane with PyTorch/TensorFlow?",
-         "Yes, PennyLane integrates with PyTorch and TensorFlow. More information can be found "
-         "in the <a href=\"https://pennylane.readthedocs.io\">documentation</a>."
+        "Is there a deadline for registration?",
+        "..."
     ),
     (
-        "What distinguishes PennyLane from other quantum programming languages?",
-        "While offering a lot of the functionality of standard quantum programming languages, "
-        "PennyLane is built around the idea of <b> training quantum circuits using automatic "
-        "differentiation</b>. This is especially important in applications such as quantum "
-        "machine learning, quantum chemistry, and quantum optimization."
+        "Does it cost anything to attend QHack?",
+        "No, attendance is FREE for everyone!"
     ),
     (
-        "What is quantum machine learning?",
-        "Quantum machine learning investigates the <b>consequences of using quantum computers "
-        "for machine learning</b>, by extending the pool of hardware for machine learning by "
-        "an entirely new type of computing device—the quantum computer.<br><br>"
-        "One can understand these devices as a form of special-purpose hardware like Application-Specific "
-        "Integrated Circuits (ASICs) and Field-Programmable Gate Arrays (FPGAs), as they are limited in "
-        "the number and type of operations that can be executed in a single run. However, information processing "
-        "with quantum computers relies on substantially different laws of physics compared to ASICs and FPGAs. <br><br>"
-        "In modern quantum machine learning, near-term quantum devices are used and trained like neural networks, "
-        "using <b>variational quantum circuits</b>. "
-        "More information can be found in our <a href=\"https://pennylane.ai/qml/whatisqml.html\">What is QML?</a> "
-        "page."
+        "What is the format for the hackathon?",
+        "The <a href=\"https://qhack.ai/hackathon.html\">hackathon</a> will consist of two stages. "
+        "In the <span style=\"font-weight: bold; font-style: italic;\">QML Challenge Board</span>, "
+        "you will tackle a set of quantum machine learning questions of various difficulty levels. "
+        "In the <span style=\"font-weight: bold; font-style: italic;\">QHack Open Hackathon</span>, teams will have one week to build a free-form "
+        "hackathon project. More details can be found <a href=\"https://github.com/XanaduAI/QHack2021\">here</a>. "
     ),
     (
-        "What are variational circuits?",
-        "Variational quantum circuits, also called parametrized quantum circuits, are "
-        "<b>quantum algorithms that depend on tunable parameters</b>. <br><br>"
-        "For example consider a quantum algorithm where one operation rotates a qubit by a "
-        "certain angle kept as a free parameter. The result of the quantum computation now "
-        "depends on the chosen angle. Using a classical co-processor, the angle, and thereby "
-        "the quantum circuit, can be <b>optimized for a given task</b>. <br><br>"
-        "The principle of variational circuits is very similar to neural networks, which is "
-        "why they play an important role in quantum machine learning.<br><br>"
-        "Visit our <a href=\"https://pennylane.ai/qml/glossary.html\">QML glossary</a> for more information "
-        "on the key concepts underpinning quantum machine learning."
+        "Are there prizes?",
+        "Yes! Check <a href=\"https://qhack.ai/hackathon.html\">here</a> for an overview of the hackathon prizes and power ups."
     ),
     (
-        "How does PennyLane evaluate gradients of quantum circuits?",
-        "Wherever possible, <b>PennyLane uses parameter-shift rules</b> to extract gradients of "
-        "quantum circuits. These rules prescribe how to estimate a gradient by running a circuit "
-        "twice or more times with deliberately shifted parameters. <br><br> In situations where "
-        "no parameter-shift rule can be applied, PennyLane uses the finite-difference rule to "
-        "approximate a gradient. <br><br> Both options work whether you run your code on simulators or "
-        "an actual quantum device.<br><br>"
-        "Visit our <a href=\"https://pennylane.ai/qml/glossary.html\">QML glossary</a> for more information "
-        "on the key concepts underpinning quantum machine learning."
+        "How do I know if I have been successfully registered?",
+        "Everyone who has submitted the registration form is on the attendees list. "
+        "There are no special acceptance criteria."
     ),
     (
-        "Is PennyLane open source?",
-        "Yes, PennyLane is open source software developed under the Apache 2.0 License."
+        "How do I sign into the QML Challenge web portal?",
+        "The web portal can be accessed <a href=\"https://challenge.qhack.ai/\">here</a>. "
+        "You will need to register your Team in order to be able to submit your solutions "
+        "and claim your points. There can only be one account associated with each Team, "
+        "so if you're a Team of more than one person you should designate someone as Team Captain "
+        "to register on behalf of the Team and submit the Team's solutions."
+    ),
+    (
+        "My team name has already been taken! What do I do?",
+        "Team names are unique. The only way to guarantee your favourite name in the "
+        "QML Challenge web portal is to create an account and grab it early. "
+        "If your team has multiple members, check if one of your teammates has already "
+        "created an account."
+    ),
+    (
+        "What is the maximum team size?",
+        "We recommend a maximum team size of 3 people. Teams of 4+ may also be acceptable, "
+        "but the CERN internship prize has a maximum of three positions available."
+    ),
+    (
+        "Do I have to form a team?",
+        "No. Individuals can take part in the hackathon challenges independently. "
+        "There is no distinction on the scoreboard between teams of one or teams with multiple members. "
+        "Attendees can also choose to follow our livestream content without taking "
+        "on the hackathon challenges (though we encourage you to do so!)."
+    ),
+    (
+        "How do I find a team?",
+        "Recruit friends, work colleagues, classmates, or put the call out in existing communities "
+        "such as the <a href=\"https://discuss.pennylane.ai\">PennyLane discussion forum</a>, "
+        "the <a href=\"https://xanadu-quantum.slack.com/\">Xanadu Slack</a>, "
+        "the <a href=\"https://discord.gg/JqVGmpkP96\">Unitary Fund Discord</a>, or "
+        "the <a href=\"https://qosf.slack.com\">QOSF Slack</a>."
+    ),
+    (
+        "What skill level do I need to have to participate?",
+        "We are aiming to offer something for everyone, from complete beginners "
+        "to seasoned experts. As part of the event, we will provide introductory tutorials for "
+        "quantum machine learning and for programming quantum computers."
+    ),
+    (
+        "What software do I need to use for the hackathon?",
+        "Our hackathon challenges will be based on <a href=\"https://pennylane.ai\">PennyLane</a> and "
+        "<a href=\"https://aws.amazon.com/braket\">Amazon Braket</a>."
+    ),
+    (
+        "Where can I get help with my AWS account or Amazon Braket?",
+        "We've set up two dedicated channels for AWS and Amazon Braket support on the <a href=\"https://join.slack.com/t/xanadu-quantum/shared_invite/zt-lxv8gwbp-e_KN6iXMfrxLoa26nPYzYg\">Xanadu Slack</a>. "
+        "For general AWS Support, submit questions to the <em>#aws-general-support</em> channel. " 
+        "For support questions specific to Amazon Braket please join the <em>#amazon-braket-support</em> channel."
+    ),
+    (
+        "Are there example challenge questions I can look at?",
+        "We will not be sharing specific example questions before the event. "
+        "To best prepare, the ideal source of example material is the PennyLane "
+        "<a href=\"https://pennylane.ai/qml\">QML website</a>."
+    ),
+    (
+        "What is the expected workload for completing the hackathon questions?",
+        "Multiple hackathon questions will be available, with different levels of difficulty. "
+        "It is up to you how much time you would like to put in; simply choose a question "
+        "to start with, and go from there! There is no requirement to answer every question."
+    ),
+    (
+        "When will my SWAG pack arrive?",
+        "We have provided SWAG packs to a limited number of early-bird attendees. "
+        "These were mailed out several weeks before the event. "
+        "While we hope that SWAG packs arrived in a timely manner, please note that "
+        "postal delays could cause packs to arrive later than expected."
+    ),
+    (
+        "How can I connect with others who are taking part in QHack?",
+        "For general discussion about QHack, join the <a href=\"https://join.slack.com/t/xanadu-quantum/shared_invite/zt-lxv8gwbp-e_KN6iXMfrxLoa26nPYzYg\">Xanadu Slack</a> "
+        "and introduce yourself on the <a href=\"https://xanadu-quantum.slack.com/archives/C01JZT78KC6\">#qhack channel</a>."
+    ),
+    (
+        "Will the talks be recorded and available later?",
+        "Yes. The talks will be available as videos-on-demand shortly after airing. "
+        "We will also be replaying some of the day's highlights starting at 9PM EST. "
+        "The talks will be re-posted on other channels at a later time."
     )
 ]
 
@@ -109,10 +159,9 @@ def render_templates():
         },
         "faq.html": {
             "faq_page": True,
-            "title": "Frequently Asked Questions (FAQ) &#8212; PennyLane",
-            "canonical_url": "https://pennylane.ai/faq.html",
-            "description": "Get quick answers to your most burning questions on PennyLane and "
-                           "quantum machine learning.",
+            "title": "Frequently Asked Questions (FAQ) &#8212; PennyLane Quantum Carnival",
+            "canonical_url": "https://pennylane.ai/carnival/faq.html",
+            "description": "Curious? Find all the details about PennyLane Quantum Carnival.",
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
             "faq": FAQ,
         },
@@ -131,6 +180,7 @@ def render_templates():
             "description": "Join us for the PennyLane Quantum Carnival, "
                            "running throughout the month of November 2021.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "faq": FAQ,
         },
         "carnival/attractions.html": {
             "title": "PennyLane Quantum Carnival &#8212; Attractions",
@@ -152,6 +202,14 @@ def render_templates():
             "description": "Take part in our festivities, collect tickets, "
                            "and trade them in for prizes.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+        },
+        "carnival/faq.html": {
+            "faq_page": True,
+            "title": "Frequently Asked Questions (FAQ) &#8212; PennyLane Quantum Carnival",
+            "canonical_url": "https://pennylane.ai/carnival/faq.html",
+            "description": "Curious? Find all the details about PennyLane Quantum Carnival.",
+            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "faq": FAQ,
         },
     }
 

@@ -25,12 +25,15 @@
 {% endblock %}
 
 {% block content %}
+{% block navbar %}
+{% include "navbar.html" %}
+{% endblock %}
 
 <div class="container mt-5 pt-5 pb-5" id="main-column">
 
     <div class="text-center mb-5">
-        <h1 class="h1-responsive" style="color:#ff4cdb;">Frequently Asked Questions</h1>
-        <p class="lead w-responsive mx-auto" style="color:#ff4cdb;"> Curious? Find all the details about PennyLane Quantum Carnival in our FAQ.</p>
+        <h1 class="h1-responsive">Frequently Asked Questions</h1>
+        <p class="lead w-responsive mx-auto grey-text" style="font-family: 'Roboto', sans-serif !important;"> Curious? Find all the details about PennyLane Quantum Carnival in our FAQ.</p>
 
     </div>
 
