@@ -133,12 +133,11 @@ def render_templates():
                            "running throughout the month of November 2021.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
         },
-        "carnival/calendar.html": {
-            "calendar_page": True,
-            "title": "PennyLane Quantum Carnival &#8212; Calendar",
+        "carnival/attractions.html": {
+            "title": "PennyLane Quantum Carnival &#8212; Attractions",
             "canonical_url": "https://pennylane.ai/carnival/index.html",
-            "description": "Check out all the events taking place in "
-                           "the PennyLane Quantum Carnival during November 2021.",
+            "description": "Check out all the events taking place during "
+                           "the PennyLane Quantum Carnival.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
         },
     }
