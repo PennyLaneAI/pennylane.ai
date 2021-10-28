@@ -1,11 +1,11 @@
 {% set navigation_bar = [
-    ('/qml', 'qml', 'Quantum machine learning'),
-    ('/qml/demonstrations.html', 'demos', 'Demos'),
-    ('/install.html', 'install', 'Install'),
-    ('/plugins.html', 'plugins', 'Plugins'),
+    (root + '/qml', 'qml', 'Quantum machine learning'),
+    (root + '/qml/demonstrations.html', 'demos', 'Demos'),
+    (root + '/install.html', 'install', 'Install'),
+    (root + '/plugins.html', 'plugins', 'Plugins'),
     ('https://pennylane.readthedocs.io', 'docs', 'Documentation'),
     ('https://pennylane.ai/blog', 'blog', 'Blog'),
-    ('/carnival', 'carnival', '<img src="' + root + '/img/carnival.png">')
+    (root + '/carnival/index.html', 'carnival', '<img src="' + root + '/img/carnival.png">')
 ] -%}
 
 {% set active_page = active_page|default("none") -%}
