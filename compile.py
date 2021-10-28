@@ -136,7 +136,7 @@ def render_templates():
         },
         "carnival/scavenger_hunt.html": {
             "title": "PennyLane Quantum Carnival &#8212; Scavenger Hunt",
-            "canonical_url": "https://pennylane.ai/carnival/index.html",
+            "canonical_url": "https://pennylane.ai/carnival/scavenger_hunt.html",
             "description": "Take part in our festivities, collect tickets, "
                            "and trade them in for prizes.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
@@ -149,6 +149,13 @@ def render_templates():
             "description": "Curious? Find all the details about PennyLane Quantum Carnival.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
             "faq": FAQ,
+            "root": ".."
+        },
+        "carnival/register.html": {
+            "title": "Register &#8212; PennyLane Quantum Carnival",
+            "canonical_url": "https://pennylane.ai/carnival/register.html",
+            "description": "Sign up for the PennyLane Quantum Carnival.",
+            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
             "root": ".."
         },
     }
