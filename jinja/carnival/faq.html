@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% set active_page = "faq" %}
 
 {% block scripts %}
     <script type="application/ld+json">
@@ -49,5 +48,7 @@
 </div>
 
 
+{% block footer %}
+{% include "footer.html" %}
 {% endblock %}
-
+{% endblock %}
