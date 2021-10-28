@@ -1,11 +1,11 @@
 {% set navigation_bar = [
     ('/qml', 'qml', 'Quantum machine learning'),
     ('/qml/demonstrations.html', 'demos', 'Demos'),
-    ('install.html', 'install', 'Install'),
-    ('plugins.html', 'plugins', 'Plugins'),
+    ('/install.html', 'install', 'Install'),
+    ('/plugins.html', 'plugins', 'Plugins'),
     ('https://pennylane.readthedocs.io', 'docs', 'Documentation'),
     ('https://pennylane.ai/blog', 'blog', 'Blog'),
-    ('https://qhack.ai', 'qhack', '<img src="{{ pathto(\'img/qhack_plain_black.png\', 1) }}">')
+    ('https://qhack.ai', 'qhack', '<img src="/img/qhack_plain_black.png">')
 ] -%}
 
 {% set active_page = active_page|default("none") -%}
@@ -16,7 +16,7 @@
     <!-- Navbar brand -->
     <a class="navbar-brand" href="index.html">
         <img class="pr-1" src="img/xanadu_x.png" width="28px"></img>
-        <img src="img/pennylane.png" width="180px"></img>
+        <img src="/img/pennylane.png" width="180px"></img>
     </a>
 
     <!-- Collapse button -->
