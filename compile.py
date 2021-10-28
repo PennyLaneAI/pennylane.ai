@@ -69,6 +69,7 @@ def render_templates():
                            "and optimization of hybrid quantum-classical computations. Use multiple "
                            "hardware devices, alongside TensorFlow or PyTorch, in a single computation.",
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
+            "root": "."
         },
         "install.html": {
             "install_page": True,
@@ -78,6 +79,7 @@ def render_templates():
                            "build from the latest GitHub source code, and get the one-line command "
                            "for installing all plugins.",
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
+            "root": "."
         },
         "plugins.html": {
             "plugins_page": True,
@@ -86,6 +88,7 @@ def render_templates():
             "description": "See the avilable PennyLane plugins, allowing access to quantum simulators "
                            "and hardware from IBM, Rigetti, Google, and more.",
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
+            "root": "."
         },
         "faq.html": {
             "faq_page": True,
@@ -93,6 +96,7 @@ def render_templates():
             "canonical_url": "https://pennylane.ai/carnival/faq.html",
             "description": "Curious? Find all the details about PennyLane Quantum Carnival.",
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
+            "root": ".",
             "faq": FAQ,
         },
         "404.html": {
@@ -103,6 +107,7 @@ def render_templates():
                            "and optimization of hybrid quantum-classical computations. Use multiple "
                            "hardware devices, alongside TensorFlow or PyTorch, in a single computation.",
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
+            "root": "."
         },
         "carnival/index.html": {
             "title": "PennyLane Quantum Carnival",
@@ -111,6 +116,7 @@ def render_templates():
                            "running throughout the month of November 2021.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
             "faq": FAQ,
+            "root": "../"
         },
         "carnival/attractions.html": {
             "title": "PennyLane Quantum Carnival &#8212; Attractions",
@@ -118,6 +124,7 @@ def render_templates():
             "description": "Check out all the events taking place during "
                            "the PennyLane Quantum Carnival.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "root": "../"
         },
         "carnival/talent_show.html": {
             "title": "PennyLane Quantum Carnival &#8212; Talent Show",
@@ -125,6 +132,7 @@ def render_templates():
             "description": "Step right up and show us what you've got. "
                            "Submit your most creative work to our quantum Talent Show.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "root": "../"
         },
         "carnival/scavenger_hunt.html": {
             "title": "PennyLane Quantum Carnival &#8212; Scavenger Hunt",
@@ -132,6 +140,7 @@ def render_templates():
             "description": "Take part in our festivities, collect tickets, "
                            "and trade them in for prizes.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "root": "../"
         },
         "carnival/faq.html": {
             "faq_page": True,
@@ -140,6 +149,7 @@ def render_templates():
             "description": "Curious? Find all the details about PennyLane Quantum Carnival.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
             "faq": FAQ,
+            "root": "../"
         },
     }
 
