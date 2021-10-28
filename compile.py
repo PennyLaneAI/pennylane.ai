@@ -116,7 +116,7 @@ def render_templates():
                            "running throughout the month of November 2021.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
             "faq": FAQ,
-            "root": "../"
+            "root": ".."
         },
         "carnival/attractions.html": {
             "title": "PennyLane Quantum Carnival &#8212; Attractions",
@@ -124,7 +124,7 @@ def render_templates():
             "description": "Check out all the events taking place during "
                            "the PennyLane Quantum Carnival.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
-            "root": "../"
+            "root": ".."
         },
         "carnival/talent_show.html": {
             "title": "PennyLane Quantum Carnival &#8212; Talent Show",
@@ -132,7 +132,7 @@ def render_templates():
             "description": "Step right up and show us what you've got. "
                            "Submit your most creative work to our quantum Talent Show.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
-            "root": "../"
+            "root": ".."
         },
         "carnival/scavenger_hunt.html": {
             "title": "PennyLane Quantum Carnival &#8212; Scavenger Hunt",
@@ -140,7 +140,7 @@ def render_templates():
             "description": "Take part in our festivities, collect tickets, "
                            "and trade them in for prizes.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
-            "root": "../"
+            "root": ".."
         },
         "carnival/faq.html": {
             "faq_page": True,
@@ -149,7 +149,7 @@ def render_templates():
             "description": "Curious? Find all the details about PennyLane Quantum Carnival.",
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
             "faq": FAQ,
-            "root": "../"
+            "root": ".."
         },
     }
 
