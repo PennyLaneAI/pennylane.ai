@@ -1,141 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    
-    <link rel="canonical" href="https://pennylane.ai/carnival/index.html" />
-    
-
-    <title>PennyLane Quantum Carnival</title>
-
-    <!-- Fonts  -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,900;1,700&display=swap"
-        rel="stylesheet" type='/text/css'>
-
-    <!-- favicon -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
-
-    <!-- Highlight-js -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/tomorrow-night.min.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130507810-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-130507810-1');
-    </script>
-
-    <!-- Local CSS -->
-    <link href="style.css" rel="stylesheet">
-
-    <!--  Essential META Tags -->
-    <meta property="og:title" content="PennyLane Quantum Carnival">
-    <meta property="og:description" content="Join us for the PennyLane Quantum Carnival, running throughout the month of November 2021.">
-    <meta property="og:image" content="https://pennylane.ai/img/carnival_splash.png">
-    <meta property="og:url" content="https://pennylane.ai/carnival/index.html">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fetch-polyfill@0.8.2/fetch.min.js"></script>
-
-    
-    
-</head>
-
-<body>
-    
-
-<!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light white sticky-top">
-
-    <!-- Navbar brand -->
-    <a class="navbar-brand" href="index.html">
-        <img class="pr-1" src="img/xanadu_x.png" width="28px"></img>
-        <img src="img/pennylane.png" width="180px"></img>
-    </a>
-
-    <!-- Collapse button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="basicExampleNav">
-
-        <!-- Links -->
-
-        <ul class="navbar-nav mr-auto">
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="/qml">Quantum machine learning</a>
-                </li>
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="/qml/demonstrations.html">Demos</a>
-                </li>
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="install.html">Install</a>
-                </li>
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="plugins.html">Plugins</a>
-                </li>
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="https://pennylane.readthedocs.io">Documentation</a>
-                </li>
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="https://pennylane.ai/blog">Blog</a>
-                </li>
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="https://qhack.ai"><img src="img/qhack_plain_black.png"></a>
-                </li>
-            
-        </ul>
-
-        <ul class="navbar-nav ml-auto nav-flex-icons">
-          <li class="nav-item">
-            <a class="nav-link" href="faq.html">
-              <i class="fab fas fa-question"></i> FAQ
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://discuss.pennylane.ai">
-              <i class="fab fab fa-discourse"></i> Support
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/PennyLaneAI/PennyLane">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </li>
-        </ul>
-    </div>
-    <!-- Collapsible content -->
-</nav>
+{% extends 'base.html' %}
+{% block content %}
+{% block navbar %}
+{% include "navbar.html" %}
+{% endblock %}
 <!--/.Navbar-->
 
 <div class="parallax" style="background-image: url('../img/xanadu-background.png'); box-shadow: none;">
@@ -147,7 +14,7 @@
         <div class="row text-center">
             <h3 class="col-12 mt-5 mb-5 grey-text" style="font-family: 'Roboto', sans-serif !important;">We're celebrating PennyLane's 3rd birthday!
             Join us in November for a month-long celebration with astonishing announcements,
-            thrilling events, and spectacular prizes. 
+            thrilling events, and spectacular prizes.
             </h3>
         </div>
 
@@ -160,8 +27,8 @@
 
 				 <div class="m-3 card-image">
 				         <img width="300px" src="../img/tickets.png" />
-				 </div>  
-				                             
+				 </div>
+
                                 <h3 class="card-title">
                                     <strong>Sign up</strong>
                                 </h3>
@@ -180,15 +47,15 @@
                     <div class="card card-image" style="background-image: url(../img/blackbird.jpg);">
                         <div class="text-center d-flex align-items-center mask rgba-white-strong">
                             <div>
-                                
+
 				 <div class="m-3 card-image">
 				         <img width="300px" src="../img/tickets.png" />
-				 </div>  
-                                
+				 </div>
+
                                 <h3 class="card-title"></i>
                                     <strong>Join in</strong>
                                 </h3>
-                                
+
                                 <p class="mb-1 black-text px-3">We've got a number of events throughout the month. Join us for a talent show, scavenger hunt, trivia night, community calls, and more!
 </p>
                                 <div class="white-text d-flex justify-content-center">
@@ -207,12 +74,12 @@
 
 				 <div class="m-3 card-image">
 				         <img width="300px" src="../img/tickets.png" />
-				 </div>  
-				 
+				 </div>
+
                                 <h3 class="card-title"></i>
                                     <strong>Win prizes</strong>
                                 </h3>
-                                
+
                                 <p class="mb-1 black-text px-3">Attend live events, take on the challenges, and check out our announcements to win tickets. Then trade them for prizes!
 </p>
                                 <div class="white-text d-flex justify-content-center">
@@ -236,86 +103,7 @@
 </div>
 
 
-
-<footer class="page-footer text-md-left pt-4">
-    <hr class="py-0 my-0">
-    <div class="container-fluid">
-        <div class="row   justify-content-md-center">
-            <div class="col-md-3">
-                <h5 class=" mb-1 footer-heading">Xanadu</h5>
-                <hr width=100px class="d-inline-block mt-0 mb-1 Deep-purple accent-4">
-                <p class="">Located in the heart of downtown Toronto, we’ve brought together exceptional minds from around the world to build quantum computers that are useful and available to people everywhere.</p>
-            </div>
-            <div class="col-md-2 col-4">
-                <h5 class=" mb-1 footer-heading">PennyLane</h5>
-                <hr width=100px class="d-inline-block mt-0 mb-1 Deep-purple accent-4">
-                <ul class="list-unstyled">
-                    <li><a class="" href="https://pennylane.ai/">Home page</a></li>
-                    <li><a class="" href="https://github.com/PennyLaneAI/pennylane">GitHub</a></li>
-                    <li><a class="" href="https://pennylane.readthedocs.io/">Documentation</a></li>
-                    <li><a class="" href="https://discuss.pennylane.ai/">Discussion forum</a></li>
-                    <li><a class="" href="https://twitter.com/pennylaneai">Twitter</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-4">
-                <h5 class=" mb-1 footer-heading">Strawberry Fields</h5>
-                <hr width=100px class="d-inline-block mt-0 mb-1 Deep-purple accent-4">
-                <ul class="list-unstyled">
-                    <li><a class="" href="https://strawberryfields.ai/">Interactive</a></li>
-                    <li><a class="" href="https://github.com/XanaduAI/strawberryfields">GitHub</a></li>
-                    <li><a class="" href="https://strawberryfields.readthedocs.io/">Documentation</a></li>
-                    <li><a class="" href="https://u.strawberryfields.ai/slack/">Slack channel</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-4">
-                <h5 class=" mb-1 footer-heading">About</h5>
-                <hr width=100px class="d-inline-block mt-0 mb-1 Deep-purple accent-4">
-                <ul class="list-unstyled">
-                    <li><a class="" href="https://www.xanadu.ai/">Home</a></li>
-                    <li><a class="" href="https://www.xanadu.ai/hardware/">Hardware</a></li>
-                    <li><a class="" href="https://www.xanadu.ai/cloud/">Cloud</a></li>
-                    <li><a class="" href="https://www.xanadu.ai/research">Research</a></li>
-                    <li><a class="" href="https://medium.com/XanaduAI">Blog</a></li>
-                    <li><a class="" href="https://www.xanadu.ai/about/">About</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <!-- <hr class="pb-0 mb-0"> -->
-    <!--Social buttons-->
-    <div class="social-section text-center">
-        <ul class="list-unstyled list-inline mb-0">
-            <li class="list-inline-item"><a class="btn-fb" href="https://www.facebook.com/Xanadu-1312050742230493/"><i class="fab fa-facebook-f"> </i></a></li>
-            <li class="list-inline-item"><a class="btn-tw" href="https://twitter.com/pennylaneai"><i class="fab fa-twitter"> </i></a></li>
-            <li class="list-inline-item"><a class="" href="https://medium.com/xanaduai"><i class="fab fa-medium-m"> </i></a></li>
-            <li class="list-inline-item"><a class="btn-li" href="https://www.linkedin.com/company/xanaduai/"><i class="fab fa-linkedin-in"> </i></a></li>
-            <li class="list-inline-item"><a class="btn-git" href="https://github.com/XanaduAI"><i class="fab fa-github"> </i></a></li>
-        </ul>
-        <a href="https://xanadu.us17.list-manage.com/subscribe?u=725f07a1d1a4337416c3129fd&id=294b062630" style="font-size: initial;">Stay updated with our newsletter</a>
-    </div>
-    <!--/.Social buttons-->
-    <!--Copyright-->
-    <div class="footer-copyright py-3 mt-0 text-center">
-        <div class="container-fluid">
-            © Copyright 2019 | Xanadu | All rights reserved
-            <br>
-            TensorFlow, the TensorFlow logo and any related marks are trademarks of Google Inc.
-        </div>
-    </div>
-
-    <!-- Highlight-js -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
-    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
-</footer>
-
-
-</body>
-
-</html>
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+{% endblock %}
