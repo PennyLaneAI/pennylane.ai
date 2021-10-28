@@ -5,7 +5,7 @@
     ('plugins.html', 'plugins', 'Plugins'),
     ('https://pennylane.readthedocs.io', 'docs', 'Documentation'),
     ('https://pennylane.ai/blog', 'blog', 'Blog'),
-    ('https://qhack.ai', 'qhack', '<img src="img/qhack_plain_black.png">')
+    ('https://qhack.ai', 'qhack', '<img src="{{ pathto(\'img/qhack_plain_black.png\', 1) }}">')
 ] -%}
 
 {% set active_page = active_page|default("none") -%}
