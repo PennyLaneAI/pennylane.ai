@@ -33,6 +33,7 @@ jobs:
           name: Build
           command: |
             . venv/bin/activate
+            mkdir -p site/carnival
             python compile.py
             zip -r /tmp/html.zip site
 
