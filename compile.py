@@ -16,12 +16,12 @@ FAQ = [
     ),
     (
         "What is the schedule?",
-        "Check our our <a href=\"attractions.html\">attractions</a> page for more details."
+        "Check our our <a href=\"attractions.html\">attractions</a> page for more details. "
         "Also watch out for special announcements throughout the month."
     ),
     (
         "Is there a deadline for registration?",
-        "..."
+        "November 30th 2021 11:59pm EST"
     ),
     (
         "Are there prizes?",
@@ -30,8 +30,7 @@ FAQ = [
     ),
     (
         "How do I know if I have been successfully registered?",
-        "Everyone who has submitted the registration form is registered. "
-        "There are no special criteria to participate."
+        "You should have seen a confirmation message on your screen."
     ),
     (
         "Do I need to register in order to participate in the Talent Show?",
@@ -48,12 +47,14 @@ FAQ = [
         "How many events are there?",
         "The main events are in the attraction calendar. Other announcements "
         "will be made on the PennyLane Twitter account, so "
-        "<a href=\"https://twitter.com/intent/user?screen_name=pennylaneai\"follow us</a> "
+        "<a href=\"https://twitter.com/intent/user?screen_name=pennylaneai\">follow us</a> "
         "to stay informed."
+        "When you register you will also have the option to receive email notifications "
+        "with updates about the Carnival."
     ),
     (
         "How many tickets are there in total?",
-        "In total, there are 1000 unique points which can be won by earning "
+        "In total, there are 100 unique points which can be won by earning "
         "or finding tickets."
     ),
 ]
