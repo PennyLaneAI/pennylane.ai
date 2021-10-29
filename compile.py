@@ -49,8 +49,8 @@ FAQ = [
         "will be made on the PennyLane Twitter account, so "
         "<a href=\"https://twitter.com/intent/user?screen_name=pennylaneai\">follow us</a> "
         "to stay informed."
-        "When you register you will have the option to receive email notifications. "
-        "We will keep them short so please register to our email carnival updates."
+        "When you register you will also have the option to receive email notifications "
+        "with updates about the Carnival."
     ),
     (
         "How many tickets are there in total?",
