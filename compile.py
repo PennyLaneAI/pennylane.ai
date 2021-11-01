@@ -119,7 +119,7 @@ def render_templates():
             "canonical_url": "https://pennylane.ai/carnival/index.html",
             "description": "Join us for the PennyLane Quantum Carnival, "
                            "running throughout the month of November 2021.",
-            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "faq": FAQ,
             "root": ".."
         },
@@ -128,7 +128,7 @@ def render_templates():
             "canonical_url": "https://pennylane.ai/carnival/index.html",
             "description": "Check out all the events taking place during "
                            "the PennyLane Quantum Carnival.",
-            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "root": ".."
         },
         "carnival/talent_show.html": {
@@ -136,7 +136,7 @@ def render_templates():
             "canonical_url": "https://pennylane.ai/carnival/index.html",
             "description": "Step right up and show us what you've got. "
                            "Submit your most creative work to our quantum Talent Show.",
-            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "root": ".."
         },
         "carnival/scavenger_hunt.html": {
@@ -144,7 +144,7 @@ def render_templates():
             "canonical_url": "https://pennylane.ai/carnival/scavenger_hunt.html",
             "description": "Take part in our festivities, collect tickets, "
                            "and trade them in for prizes.",
-            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "root": ".."
         },
         "carnival/faq.html": {
@@ -152,7 +152,7 @@ def render_templates():
             "title": "Frequently Asked Questions (FAQ) &#8212; PennyLane Quantum Carnival",
             "canonical_url": "https://pennylane.ai/carnival/faq.html",
             "description": "Curious? Find all the details about PennyLane Quantum Carnival.",
-            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "faq": FAQ,
             "root": ".."
         },
@@ -160,7 +160,7 @@ def render_templates():
             "title": "Register &#8212; PennyLane Quantum Carnival",
             "canonical_url": "https://pennylane.ai/carnival/register.html",
             "description": "Sign up for the PennyLane Quantum Carnival.",
-            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "root": ".."
         },
 #        "carnival/claim.html": {
@@ -174,7 +174,7 @@ def render_templates():
             "title": "Terms and Conditions &#8212; PennyLane Quantum Carnival",
             "canonical_url": "https://pennylane.ai/carnival/terms_and_conditions.html",
             "description": "Terms and Conditions for the PennyLane Quantum Carnival.",
-            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+            "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "root": ".."
         },
     }
