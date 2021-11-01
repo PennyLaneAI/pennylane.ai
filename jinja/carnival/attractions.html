@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block navbar %}
+{% include "navbar.html" %}
+{% endblock %}
+<style>
+.card-title-resize{
+	min-height: 6rem;
+}
+</style>
+<div class="parallax" style="background-image: url('../img/xanadu-background.png'); box-shadow: none;">
+    <div class="container">
+
+        <div class="mb-5 text-center teal-text text-lighten-2">
+            <img src="../img/carnival_attractions.png" class="logo" style="max-width: 500px;"></img>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/balloons_blur.png); background-size: cover;">
+                        <a href="scavenger_hunt.html">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col">
+					      <i class="fas fa-ticket-alt fa-5x" style="color:#a3abdd"></i>
+					<h3 class="card-title card-title">
+					    <strong>Scavenger Hunt</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 1-30</h5>
+				  </div>
+
+                        </div>
+                        </a>
+                    </div>
+            </div>
+           <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/sign_up_blur.png); background-size: cover;">
+                        <a href="talent_show.html">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col">
+					      <i class="fas fa-palette fa-5x" style="color:#dd4d63"></i>
+					<h3 class="card-title card-title">
+					    <strong>Talent Show</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 1-22</h5>
+				  </div>
+
+                        </div>
+                        </a>
+                    </div>
+            </div>
+           <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/tent_blur.png); background-size: cover;">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col">
+					      <i class="fas fa-microphone-alt fa-5x" style="color:#d491dd"></i>
+					<h3 class="card-title card-title">
+					    <strong>Trivia Party</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 12</h5>
+				  </div>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/ferris_wheel_blur.png); background-size: cover;">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col">
+					      <i class="fas fa-laptop-code fa-5x" style="color:#47e4ca"></i>
+					<h3 class="card-title card-title">
+					    <strong>Coding Challenges</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 16-30</h5>
+				  </div>
+
+                        </div>
+                    </div>
+            </div>
+           <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/fireworks_blur.png); background-size: cover;">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col">
+					      <i class="fas fa-trophy fa-5x" style="color:#ffc903"></i>
+					<h3 class="card-title card-title">
+					    <strong>Talent Show Winners</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 25</h5>
+				  </div>
+
+                        </div>
+                    </div>
+            </div>
+           <div class="col-md-4 mb-5">
+                    <div class="card card-image" style="background-image: url(../img/learn.png); background-size: cover;">
+                        <div class="text-center d-flex align-items-center rgba-white-strong mask">
+
+				  <div class="col-md-12">
+				    <div class="row my-4">
+				      <div class="col">
+					      <i class="fas fa-bullhorn fa-5x" style="color:#2084ff"></i>
+					<h3 class="card-title card-title">
+					    <strong>Special Announcements</strong>
+					</h3>
+				      </div>
+				    </div>
+				   <h5 class="mb-1 black-text px-3">Nov 1-30</h5>
+				  </div>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+
+        <div class="row text-center">
+            <h3 class="col-12 mt-5 mb-5 grey-text" style="font-family: 'Roboto', sans-serif !important;">Got questions? Check out our <a href="faq.html">FAQ</a>.
+            </h3>
+        </div>        
+        
+        <div class="row-sm text-center">
+            <p class="\grey-text" style="font-family: 'Roboto', sans-serif !important;"><a href="terms_and_conditions.html">Terms & Conditions</a>
+            </h3>
+        </div>
+
+
+    </div>
+</div>
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+{% endblock %}
