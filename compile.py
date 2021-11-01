@@ -163,13 +163,13 @@ def render_templates():
             "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
             "root": ".."
         },
-        "carnival/claim.html": {
-            "title": "Claim a prize &#8212; PennyLane Quantum Carnival",
-            "canonical_url": "https://pennylane.ai/carnival/register.html",
-            "description": "Redeem your tickets to claim a prize in the PennyLane Quantum Carnival Scavenger Hunt.",
-            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
-            "root": ".."
-        },
+#        "carnival/claim.html": {
+#            "title": "Claim a prize &#8212; PennyLane Quantum Carnival",
+#            "canonical_url": "https://pennylane.ai/carnival/register.html",
+#            "description": "Redeem your tickets to claim a prize in the PennyLane Quantum Carnival Scavenger Hunt.",
+#            "thumbnail": "https://pennylane.ai/img/carnival_splash.png",
+#            "root": ".."
+#        },
         "carnival/terms_and_conditions.html": {
             "title": "Terms and Conditions &#8212; PennyLane Quantum Carnival",
             "canonical_url": "https://pennylane.ai/carnival/terms_and_conditions.html",
