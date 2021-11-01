@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity":
+        [
+        {% for question, answer in faq %}
+            {
+                "@type": "Question",
+                "name": {{ question | tojson }},
+                "acceptedAnswer":
+                {
+                    "@type": "Answer",
+                    "text": {{ answer | tojson }}
+                }
+            }{{ "," if not loop.last }}
+        {% endfor %}
+        ]
+    }
+    </script>
+{% endblock %}
+
+{% block content %}
+{% block navbar %}
+{% include "navbar.html" %}
+{% endblock %}
+
+<div class="container mt-5 pt-5 pb-5" id="main-column">
+
+    <div class="text-center mb-5">
+        <h1 class="h1-responsive">Terms and Conditions</h1>
+
+    </div>
+
+<h3>PENNYLANE QUANTUM CARNIVAL</h3>
+<p>October 29, 2021</p>
+<h4>Description</h4>
+
+<p>
+The <strong>PennyLane Quantum Carnival</strong> (the “<strong>Competition</strong>”) consists of multiple opportunities to win tickets (points) over the course of the month of November (2021) based upon initial provision of a participant’s email.  ONE activity requires specific entrance requirements with judging by the Organizer.  At the end of the month, based upon total points collected, allowable prize(s) (each an “<strong>Award</strong>”) will be chosen by the participants and distributed.
+</p>
+
+<p>
+Terms and conditions applicable to each Award are detailed in the section labelled “Awards” below. In addition, all awards are covered by the Competition General Rules and Regulations.
+</p>
+
+<h4>Organizer</h4>
+
+<p>
+The organizer of this Competition is Xanadu Quantum Technologies Inc., 777 Bay St., Toronto ON, M5G 2C8, Canada (“<strong>Xanadu</strong>”, “<strong>we</strong>”, or “<strong>us</strong>”). 
+</p>
+
+<h4>Competition Period</h4>
+
+<p>
+The Competition will commence when Xanadu begins accepting email submissions through <a href="https://pennylane.ai/carnival/index.html">pennylane.ai/carnival/index.html</a>. This will start taking place at approximately 9:00 am ET 1 November 2021. The Competition end date is 5:59 pm ET 30 November 2021.
+</p>
+
+<h4>Awards</h4>
+
+<h5>Talent Show Award</h5>
+
+<ul>
+<li><strong>Total Award(s):  30 Points</strong> (to the winner)</li>
+<li><strong>Description:</strong> Participants submit their drawings, memes, videos, music, or other creative work that promote PennyLane, coding, quantum computers, or other related topics.</li>
+<li><strong>Rules:</strong>
+	<ul>
+	<li>Entrants and Submissions must conform to the General Rules and Regulations.</li>
+	<li>Submissions must be submitted onto an Organizer-provider link along with the participant’s email address.</li>
+	<li>Multiple submissions can be made, but only one ticket will be awarded (rather than tickets for each individual piece).</li>
+</ul>
+</li>
+<li><strong>Award criteria:</strong>  The three grading criteria will be creativity, pertinence, and quality. The participant with the highest grade overall will get 30 tickets.  Second place will win 20 tickets.  Third prize will  win 10 tickets. Others with outstanding submissions (at least 2 points per grading criterion) that don’t make the top 3 can win 5 tickets per participant. All participants will get 1 ticket for making a submission to the competition.</li>
+<li><strong>Judging criteria:</strong>
+Two Organizers will provide a grade on a scale from 1-3 for each criterion and for each submission. </li>
+<li><strong>Award entry period:</strong> 1 November 2021, ending 22 November 2021 (5:59 PM ET).</li>
+<li><strong>Other considerations:</strong> Submissions may be profiled on Xanadu’s social media, at Xanadu’s discretion.  Submissions may be posted/used on Xanadu’s sites (e.g., incorporated into the PennyLane webpage or displayed on xanadu.ai).
+</ul>
+
+<h4>PennyLane Scavenger Hunt Final Award(s)</h4>
+<ul>
+<li><strong>Prize(s):</strong> A variety of Xanadu-themed and other miscellaneous products. </li>
+<li><strong>Description:</strong> Participants enrol/register/participate in as many Scavenger Hunt activities offered by the Organizer as they would like over the course of the month.  Tickets will be awarded for participating in each event. Participants can discover additional tickets hidden on the internet.</li>
+<li><strong>Rules:</strong>
+<ul>
+	<li>Entrants and Submissions must conform to the General Rules and Regulations.</li> 
+	<li>Tickets accumulated through the various activities will award a different number of points according to their colour; events will give more points according to the level of difficulty associated in earning those points.</li> 
+	<li>All participants must submit the email address they registered for the scavenger hunt, their first and last name (optional) and up to 25 unique ticket codes.</li> 
+	<li>Participants may update their submission before the competition closing; however, only the last submission of tickets from each participant will be considered.</li> 
+</ul>
+</li> 
+<li><strong>Award criteria:</strong>
+Participants can convert their accumulated points into prizes based upon the following levels:
+<ul>
+<li>Up to 50 participants will receive prizes in the form of a t-shirt, hat, notebook, stickers or similar items.</li>
+<li>Participants who have gathered at least 23 points are eligible to receive the prizes mentioned.</li>
+<li>The participants with the most number of points in their final submission will have priority in the swag allocation.</li>
+<li>In case of a tie for the 50th place the tie-breaker will be the date of submission of the code submission form, where the person with the earliest final submission of the form will get the last prize available.</li>
+</ul>
+</li>
+<li><strong>Award entry period:</strong> Participants must submit their gathered tickets before 5:59 PM Eastern Time 30 November 2021. The unique codes for submitted tickets will be validated and points summed for each participant by the Organizer. Xanadu will notify participants of their total points by December 15, 2021 and participants will have 60 days with which to redeem their selected prizes as outlined above.</li>
+<li><strong>Other considerations:</strong> Participants may be profiled on Xanadu’s social media platforms and/or website.  </li>
+</ul>
+
+
+<h4>General Rules and Regulations</h4>
+
+By registering for the PennyLane Scavenger Hunt, you agree to abide by the following Terms and Conditions. Competition entry void in Quebec.
+<ol>
+<li>Except where prohibited by applicable local law, residents of any country who have reached the age of majority in their jurisdiction of residence at the time of entry may enter, except employees of Xanadu Quantum Technologies Inc. and its advertising and promotional agencies, employees of any of the competition’s Organizers and the immediate family of such employees and persons with whom such employees are domiciled. “Immediate family” is defined as parents, siblings, children or spouse. THE COMPETITION IS VOID WHEREVER BY, WITHOUT LIMITATION, FILING OR REGISTRATION REQUIREMENTS, OR IS OTHERWISE PROHIBITED OR RESTRICTED BY APPLICABLE LAW.</li>
+<li>No purchase necessary to enter. Limit of one entry per person. This entry permits participation in all events scheduled throughout the month of the Competition.  Competitions open 1 November 2021 and close on 30th November 2021 (the “Entry Period”). Valid entries for the Talent Show Event may only be submitted via the form provided at the carnival website https://pennylane.ai/carnival/index.html.  </li>
+<li>Talent Show entries:
+	<ol type="a">
+	<li>must be submitted in English;</li>
+	<li>must not contain material that is inappropriate, indecent, contain profanity, nudity, sexual content; hateful content of any kind; content that promotes violence or harm to another living creature; or any other offensive content (as determined by Organizer in its sole discretion);</li>
+	<li>must not contain material that promotes any activities that may appear unsafe or dangerous;</li>
+	<li>must not contain material that promotes bigotry, racism, hatred or harm against any group or individual or promotes discrimination based on race, sex, religion, nationality, disability, sexual orientation or age;</li>
+	<li>must not contain advertisements, personal solicitations or commercial solicitations; or promote any political agenda or party;</li>
+	<li>must not include any trademarks, logos, or copyrighted materials for which you do not have the necessary rights, permissions or authority under applicable law, other than Organizer’s related materials, or advertise or promote any brand or product owned by any entity other than Organizer;</li>
+	<li>must not contain materials for which you do not have the necessary rights, permissions or authority under applicable law to submit (e.g., materials embodying the names, likenesses, photographs, or other identifying elements of any person for which you have not obtained their relevant consent or do not otherwise have the authority to submit in your entry);</li>
+	<li>must be in keeping with Xanadu’s image and not contain any material that could reflect negatively on the name, reputation, or goodwill of Xanadu, its subsidiaries or affiliates;</li>
+	<li>must not violate or encourage the violation of any law, rule or regulation.</li>
+	</ol>
+</li>
+<li>The Talent Show submissions are final when the online Submission is completed and submitted and the appropriate entry period is closed. The Submission may not be edited, revised, or updated after the entry period is closed. </li>
+<li>Participants hereby grant Xanadu a world-wide, royalty-free, sublicensable and transferable license and right to use, copy, reproduce, display, perform and publish, and otherwise exploit the Talent Show Submission and waive all moral rights therein, including the right to make available any part or all of your Submission publically available in an online gallery hosted by Xanadu on https://pennylane.ai/ or its subdomains.</li>
+<li>Xanadu reserves the right to have any Submission removed which, in its sole determination, does not comply with these Rules and Regulations. In such event, the entry associated with such Submission will be void.</li>
+<li>Any costs or expenses (including taxes) incurred by the winners in claiming or using their prizes will be the responsibility of the winners. Prizes must be accepted as awarded. Organizer reserves the right to substitute a prize of equal or greater value if stated prize becomes unavailable for reasons not related to the winner.</li>
+<li>Xanadu reserves the right to change the number of prizes awarded for event the based on the volume of participation, but the number of prizes will be no more than 50 prize packages. </li>
+<li>A judging panel will review valid entries for the Talent Show received during the Entry Period and assess them to determine the points to be awarded to each entry. Chances of winning any prize will depend upon the number and quality of the entries. Judges reserve the right to recuse themselves, at their discretion, in the case of a past or present relationship with the submitter. In such a case, an alternative judge will participate in the evaluation of the Submission. Ties may be awarded for which participants will receive equal points.</li>
+All decisions of the Organizer and judging panel are final and not subject to appeal.
+<li>Winners will be notified by email within 15 days after the Competition conclusion. After the verification and acceptance by all prize winners, a list of winner(s) for each award may be posted to the PennyLane webpage and/or shared via social media. </li>
+<li>Winners may be required to sign a release form confirming acceptance of the prize as awarded and releasing Xanadu and its affiliates from any liability relating to their prize. By entering this competition, entrants consent to the use of their names and/or photographs for publicity purposes without compensation, worldwide in perpetuity and in any form of media including the Internet. </li>
+<li>To the maximum extent permitted by applicable law, in no event will Xanadu, its affiliates, sponsors, or any of their employees, directors, consultants, contractors and agents have any direct, indirect, incidental, consequential, special, exemplary, punitive or other liability to participants, even if notified in advance of the possibility of such liability. In addition, Xanadu is not responsible for, (i) late, lost, delayed, not received, damaged, misdirected, incomplete, stolen, or illegible entries; or (ii) failure to receive entries due to transmission failures or technical failures of any kind, including malfunctioning of any network, servers, access providers, hardware or software, whether originating with sender or recipient. Xanadu reserves the right to cancel or modify the competition activities if, in its sole discretion, it determines that the competition is not capable of running as originally planned for any reason (such as tampering or infection by computer virus, fraud, technical failures, printing or distribution errors, or any other causes or occurrences have compromised the fairness or integrity of the competition). If, as a result of an error relating to the entry process, drawing or any other aspect of the competition, there are more potential winners of prizes than contemplated in the rules, there will be a random draw amongst all eligible prize claimants after the end of the Entry Period to award the prize.</li>
+<li>Xanadu reserves the right to modify these General Rules and Regulations. </li>
+<li>Xanadu owns all rights, title and interest in all intellectual property, data, content and other materials made available via the Talent Show.</li>
+<li>In the event of any discrepancy or inconsistency between the Terms and Conditions of these rules and disclosures or other statements contained in any competition-related materials, including the entry form, or point of sale, television, print or online advertising, the terms and conditions of these rules shall prevail, govern and control.</li>
+<li>Persons who tamper with or abuse any aspect of the Competition or attempt to undermine the legitimate operation of the Competition by cheating, deception or other unfair practices, or intend to annoy, abuse, threaten or harass any other entrant or any representative of Xanadu or who are in violation of these Official Rules, as solely determined by Xanadu, will be disqualified and all associated entries will be void. Any attempt to deliberately damage the content or operation of any of the activities is unlawful and subject to legal action by Xanadu and/or their respective agents.</li>
+</ol>
+
+
+
+
+
+</div>
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+{% endblock %}
