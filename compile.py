@@ -21,7 +21,7 @@ FAQ = [
     ),
     (
         "Is there a deadline for registration?",
-        "November 30th 2021 11:59pm ET"
+        "November 30th 2021 5:59pm ET"
     ),
     (
         "Are there prizes?",
