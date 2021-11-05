@@ -177,6 +177,14 @@ def render_templates():
             "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "root": ".."
         },
+        "carnival/trivia_party.html": {
+            "title": "PennyLane Quantum Carnival &#8212; Trivia Party",
+            "canonical_url": "https://pennylane.ai/carnival/index.html",
+            "description": "Have fun and join the party! "
+                           "Test yourself and get carnival tickets!",
+            "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
+            "root": ".."
+        },
     }
 
     for file in files:
