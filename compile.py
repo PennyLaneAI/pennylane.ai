@@ -196,8 +196,7 @@ def render_templates():
         "carnival/prize_booth.html": {
             "title": "PennyLane Quantum Carnival &#8212; Prize Booth",
             "canonical_url": "https://pennylane.ai/carnival/index.html",
-            "description": "See all the prizes available for you!"
-                           "Collect carnival tickets and earn these amazing prizes!",
+            "description": "Collect carnival tickets and earn these amazing prizes!",
             "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "root": ".."
         },
