@@ -185,6 +185,20 @@ def render_templates():
             "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "root": ".."
         },
+        "carnival/community_calls.html": {
+            "title": "PennyLane Quantum Carnival &#8212; Community Calls",
+            "canonical_url": "https://pennylane.ai/carnival/index.html",
+            "description": "Join us and get carnival tickets!",
+            "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
+            "root": ".."
+        },
+        "carnival/prize_booth.html": {
+            "title": "PennyLane Quantum Carnival &#8212; Prize Booth",
+            "canonical_url": "https://pennylane.ai/carnival/index.html",
+            "description": "Collect carnival tickets and earn these amazing prizes!",
+            "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
+            "root": ".."
+        },
     }
 
     for file in files:
