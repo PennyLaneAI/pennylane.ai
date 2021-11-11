@@ -188,8 +188,7 @@ def render_templates():
         "carnival/community_calls.html": {
             "title": "PennyLane Quantum Carnival &#8212; Community Calls",
             "canonical_url": "https://pennylane.ai/carnival/index.html",
-            "description": "Meet people and learn! "
-                           "Join us and get carnival tickets!",
+            "description": "Join us and get carnival tickets!",
             "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "root": ".."
         },
