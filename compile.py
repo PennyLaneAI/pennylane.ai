@@ -199,6 +199,13 @@ def render_templates():
             "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "root": ".."
         },
+        "carnival/coding_challenges.html": {
+            "title": "PennyLane Quantum Carnival &#8212; Coding Challenges",
+            "canonical_url": "https://pennylane.ai/carnival/index.html",
+            "description": "Try your hand at the PennyLane Quantum Carnival coding challenges.",
+            "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
+            "root": ".."
+        },
     }
 
     for file in files:
