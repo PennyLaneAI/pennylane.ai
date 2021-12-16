@@ -1,26 +1,6 @@
 {% extends 'base.html' %}
 
 {% block scripts %}
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity":
-        [
-        {% for question, answer in faq %}
-            {
-                "@type": "Question",
-                "name": {{ question | tojson }},
-                "acceptedAnswer":
-                {
-                    "@type": "Answer",
-                    "text": {{ answer | tojson }}
-                }
-            }{{ "," if not loop.last }}
-        {% endfor %}
-        ]
-    }
-    </script>
 {% endblock %}
 
 {% block content %}
