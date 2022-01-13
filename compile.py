@@ -10,57 +10,72 @@ def render_from_template(directory, template_name, **kwargs):
     return template.render(**kwargs)
 
 FAQ = [
-        (
-        "When will PennyLane Quantum Carnival take place?",
-        "November 1-30, 2021. "
+    (
+        "What is PennyLane?",
+        "PennyLane is a <b> software framework for differentiable quantum programming</b>, "
+        "similar to TensorFlow and PyTorch for classical computation. It facilitates the "
+        "training of variational quantum circuits."
     ),
     (
-        "What is the schedule?",
-        "Check our our <a href=\"attractions.html\">attractions</a> page for more details. "
-        "Also watch out for special announcements throughout the month."
+        "Does PennyLane work with hardware?",
+        "Yes, PennyLane can be used to optimize quantum circuits running on hardware. "
+        "Simply choose a hardware backend as your device. You can find all available backends "
+        "in the <a href=\"plugins.html\">plugins</a> section."
     ),
     (
-        "Is there a deadline for registration?",
-        "November 30th 2021 5:59pm ET"
+         "Can I use PennyLane with PyTorch/TensorFlow?",
+         "Yes, PennyLane integrates with PyTorch and TensorFlow. More information can be found "
+         "in the <a href=\"https://pennylane.readthedocs.io\">documentation</a>."
     ),
     (
-        "Are there prizes?",
-        "Absolutely! The prize booth will become available during the event. "
-        "Check <a href=\"scavenger_hunt.html\">here</a> for more "
-        "details on how to win prizes."
+        "What distinguishes PennyLane from other quantum programming languages?",
+        "While offering a lot of the functionality of standard quantum programming languages, "
+        "PennyLane is built around the idea of <b> training quantum circuits using automatic "
+        "differentiation</b>. This is especially important in applications such as quantum "
+        "machine learning, quantum chemistry, and quantum optimization."
     ),
     (
-        "How do I know if I have been successfully registered?",
-        "You should have seen a confirmation message on your screen after submitting "
-        "our <a href=\"register.html\">sign-up form</a>."
+        "What is quantum machine learning?",
+        "Quantum machine learning investigates the <b>consequences of using quantum computers "
+        "for machine learning</b>, by extending the pool of hardware for machine learning by "
+        "an entirely new type of computing device—the quantum computer.<br><br>"
+        "One can understand these devices as a form of special-purpose hardware like Application-Specific "
+        "Integrated Circuits (ASICs) and Field-Programmable Gate Arrays (FPGAs), as they are limited in "
+        "the number and type of operations that can be executed in a single run. However, information processing "
+        "with quantum computers relies on substantially different laws of physics compared to ASICs and FPGAs. <br><br>"
+        "In modern quantum machine learning, near-term quantum devices are used and trained like neural networks, "
+        "using <b>variational quantum circuits</b>. "
+        "More information can be found in our <a href=\"https://pennylane.ai/qml/whatisqml.html\">What is QML?</a> "
+        "page."
     ),
     (
-        "Do I need to register in order to participate in the Talent Show?",
-        "Yes, you will need to <a href=\"register.html\">register</a> for "
-        "the Carnival before submitting your entry to the Talent Show. "
-        "All we need is your email."
+        "What are variational circuits?",
+        "Variational quantum circuits, also called parametrized quantum circuits, are "
+        "<b>quantum algorithms that depend on tunable parameters</b>. <br><br>"
+        "For example consider a quantum algorithm where one operation rotates a qubit by a "
+        "certain angle kept as a free parameter. The result of the quantum computation now "
+        "depends on the chosen angle. Using a classical co-processor, the angle, and thereby "
+        "the quantum circuit, can be <b>optimized for a given task</b>. <br><br>"
+        "The principle of variational circuits is very similar to neural networks, which is "
+        "why they play an important role in quantum machine learning.<br><br>"
+        "Visit our <a href=\"https://pennylane.ai/qml/glossary.html\">QML glossary</a> for more information "
+        "on the key concepts underpinning quantum machine learning."
     ),
     (
-        "How do I get tickets in the Scavenger Hunt?",
-        "You can get tickets by attending our live events, contributing to "
-        "PennyLane, participating in the Talent Show, and if you search carefully, "
-        "you can find many other tickets hidden in secret places."
+        "How does PennyLane evaluate gradients of quantum circuits?",
+        "Wherever possible, <b>PennyLane uses parameter-shift rules</b> to extract gradients of "
+        "quantum circuits. These rules prescribe how to estimate a gradient by running a circuit "
+        "twice or more times with deliberately shifted parameters. <br><br> In situations where "
+        "no parameter-shift rule can be applied, PennyLane uses the finite-difference rule to "
+        "approximate a gradient. <br><br> Both options work whether you run your code on simulators or "
+        "an actual quantum device.<br><br>"
+        "Visit our <a href=\"https://pennylane.ai/qml/glossary.html\">QML glossary</a> for more information "
+        "on the key concepts underpinning quantum machine learning."
     ),
     (
-        "How many events are there?",
-        "Several key events are listed on the "
-        "<a href=\"attractions.html\">attractions page</a>. "
-        "Other announcements will be made on the PennyLane Twitter account, so "
-        "<a href=\"https://twitter.com/intent/user?screen_name=pennylaneai\">follow us</a> "
-        "to stay informed. "
-        "When you <a href=\"register.html\">register</a> you will also have the option "
-        "to receive email notifications with updates about the Carnival."
-    ),
-    (
-        "How many tickets are there in total?",
-        "In total, there are 100 unique points which can be won by earning "
-        "or finding tickets."
-    ),
+        "Is PennyLane open source?",
+        "Yes, PennyLane is open source software developed under the Apache 2.0 License."
+    )
 ]
 
 
