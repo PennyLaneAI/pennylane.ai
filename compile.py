@@ -11,6 +11,76 @@ def render_from_template(directory, template_name, **kwargs):
 
 
 FAQ = [
+    (
+        "What is PennyLane?",
+        "PennyLane is a <b> software framework for differentiable quantum programming</b>, "
+        "similar to TensorFlow and PyTorch for classical computation. It facilitates the "
+        "training of variational quantum circuits."
+    ),
+    (
+        "Does PennyLane work with hardware?",
+        "Yes, PennyLane can be used to optimize quantum circuits running on hardware. "
+        "Simply choose a hardware backend as your device. You can find all available backends "
+        "in the <a href=\"plugins.html\">plugins</a> section."
+    ),
+    (
+         "Can I use PennyLane with PyTorch/TensorFlow?",
+         "Yes, PennyLane integrates with PyTorch and TensorFlow. More information can be found "
+         "in the <a href=\"https://pennylane.readthedocs.io\">documentation</a>."
+    ),
+    (
+        "What distinguishes PennyLane from other quantum programming languages?",
+        "While offering a lot of the functionality of standard quantum programming languages, "
+        "PennyLane is built around the idea of <b> training quantum circuits using automatic "
+        "differentiation</b>. This is especially important in applications such as quantum "
+        "machine learning, quantum chemistry, and quantum optimization."
+    ),
+    (
+        "What is quantum machine learning?",
+        "Quantum machine learning investigates the <b>consequences of using quantum computers "
+        "for machine learning</b>, by extending the pool of hardware for machine learning by "
+        "an entirely new type of computing device—the quantum computer.<br><br>"
+        "One can understand these devices as a form of special-purpose hardware like Application-Specific "
+        "Integrated Circuits (ASICs) and Field-Programmable Gate Arrays (FPGAs), as they are limited in "
+        "the number and type of operations that can be executed in a single run. However, information processing "
+        "with quantum computers relies on substantially different laws of physics compared to ASICs and FPGAs. <br><br>"
+        "In modern quantum machine learning, near-term quantum devices are used and trained like neural networks, "
+        "using <b>variational quantum circuits</b>. "
+        "More information can be found in our <a href=\"https://pennylane.ai/qml/whatisqml.html\">What is QML?</a> "
+        "page."
+    ),
+    (
+        "What are variational circuits?",
+        "Variational quantum circuits, also called parametrized quantum circuits, are "
+        "<b>quantum algorithms that depend on tunable parameters</b>. <br><br>"
+        "For example consider a quantum algorithm where one operation rotates a qubit by a "
+        "certain angle kept as a free parameter. The result of the quantum computation now "
+        "depends on the chosen angle. Using a classical co-processor, the angle, and thereby "
+        "the quantum circuit, can be <b>optimized for a given task</b>. <br><br>"
+        "The principle of variational circuits is very similar to neural networks, which is "
+        "why they play an important role in quantum machine learning.<br><br>"
+        "Visit our <a href=\"https://pennylane.ai/qml/glossary.html\">QML glossary</a> for more information "
+        "on the key concepts underpinning quantum machine learning."
+    ),
+    (
+        "How does PennyLane evaluate gradients of quantum circuits?",
+        "Wherever possible, <b>PennyLane uses parameter-shift rules</b> to extract gradients of "
+        "quantum circuits. These rules prescribe how to estimate a gradient by running a circuit "
+        "twice or more times with deliberately shifted parameters. <br><br> In situations where "
+        "no parameter-shift rule can be applied, PennyLane uses the finite-difference rule to "
+        "approximate a gradient. <br><br> Both options work whether you run your code on simulators or "
+        "an actual quantum device.<br><br>"
+        "Visit our <a href=\"https://pennylane.ai/qml/glossary.html\">QML glossary</a> for more information "
+        "on the key concepts underpinning quantum machine learning."
+    ),
+    (
+        "Is PennyLane open source?",
+        "Yes, PennyLane is open source software developed under the Apache 2.0 License."
+    )
+]
+
+
+CARNIVAL_FAQ = [
         (
         "When will PennyLane Quantum Carnival take place?",
         "November 1-30, 2021. "
@@ -96,15 +166,16 @@ def render_templates():
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
             "root": "."
         },
-        "faq.html": {
-            "faq_page": True,
-            "title": "Frequently Asked Questions (FAQ) &#8212; PennyLane Quantum Carnival",
-            "canonical_url": "https://pennylane.ai/carnival/faq.html",
-            "description": "Curious? Find all the details about PennyLane Quantum Carnival.",
-            "thumbnail": "https://pennylane.ai/img/thumbnail.png",
-            "root": ".",
+        "faq.html": { 
+            "faq_page": True, 
+            "title": "Frequently Asked Questions (FAQ) &#8212; PennyLane", 
+            "canonical_url": "https://pennylane.ai/faq.html", 
+            "description": "Get quick answers to your most burning questions on PennyLane and " 
+                           "quantum machine learning.", 
+            "thumbnail": "https://pennylane.ai/img/thumbnail.png", 
             "faq": FAQ,
-        },
+            "root": "."
+        }, 
         "404.html": {
             "404_page": True,
             "title": "Page not found &#8212; PennyLane",
@@ -115,6 +186,9 @@ def render_templates():
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
             "root": "."
         },
+        ##########################
+        # Carnival pages
+        ##########################
         "carnival/index.html": {
             "title": "PennyLane Quantum Carnival",
             "canonical_url": "https://pennylane.ai/carnival/index.html",
@@ -154,7 +228,7 @@ def render_templates():
             "canonical_url": "https://pennylane.ai/carnival/faq.html",
             "description": "Curious? Find all the details about PennyLane Quantum Carnival.",
             "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
-            "faq": FAQ,
+            "faq": CARNIVAL_FAQ,
             "root": ".."
         },
         "carnival/register.html": {
