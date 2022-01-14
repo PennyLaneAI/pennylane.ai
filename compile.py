@@ -166,15 +166,16 @@ def render_templates():
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
             "root": "."
         },
-         "faq.html": { 
-             "faq_page": True, 
-             "title": "Frequently Asked Questions (FAQ) &#8212; PennyLane", 
-             "canonical_url": "https://pennylane.ai/faq.html", 
-             "description": "Get quick answers to your most burning questions on PennyLane and " 
-                            "quantum machine learning.", 
-             "thumbnail": "https://pennylane.ai/img/thumbnail.png", 
-             "faq": FAQ, 
-         }, 
+        "faq.html": { 
+            "faq_page": True, 
+            "title": "Frequently Asked Questions (FAQ) &#8212; PennyLane", 
+            "canonical_url": "https://pennylane.ai/faq.html", 
+            "description": "Get quick answers to your most burning questions on PennyLane and " 
+                           "quantum machine learning.", 
+            "thumbnail": "https://pennylane.ai/img/thumbnail.png", 
+            "faq": FAQ,
+            "root": "."
+        }, 
         "404.html": {
             "404_page": True,
             "title": "Page not found &#8212; PennyLane",
@@ -185,6 +186,9 @@ def render_templates():
             "thumbnail": "https://pennylane.ai/img/thumbnail.png",
             "root": "."
         },
+        ##########################
+        # Carnival pages
+        ##########################
         "carnival/index.html": {
             "title": "PennyLane Quantum Carnival",
             "canonical_url": "https://pennylane.ai/carnival/index.html",
