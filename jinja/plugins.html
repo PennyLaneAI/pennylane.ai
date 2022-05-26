@@ -24,36 +24,12 @@
                     <h4 class="card-header juicy-peach-gradient">default.qubit</h4>
                     <div class="card-body">
                         <p class="card-text">
-                            A simple state-vector qubit simulator written in Python.
+                            A simple state-vector qubit simulator written in Python, with Autograd, JAX, TensorFlow, and Torch backends.
                             <br><br>A good choice for optimizations with a moderate number of qubits and parameters, or when using stochastic expectation values.
                         </p>
                     </div>
                 </a>
             </div>
-            <div class="card plugin-card">
-                <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.devices.default_qubit_tf.DefaultQubitTF.html">
-                    <h4 class="card-header juicy-peach-gradient">default.qubit.tf</h4>
-                    <div class="card-body">
-                        <p class="card-text">
-                            State-vector qubit simulators written using TensorFlow and supporting classical backpropagation. <br>
-                            <br>A good choice when the number of parameters to be optimized is large, and expectation values are exact.
-                        </p>
-                    </div>
-                </a>
-            </div>
-            <div class="card plugin-card">
-                <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.devices.default_qubit_autograd.DefaultQubitAutograd.html">
-                    <h4 class="card-header juicy-peach-gradient">default.qubit.autograd</h4>
-                    <div class="card-body">
-                        <p class="card-text">
-                            State-vector qubit simulators written using Autograd and supporting classical backpropagation. <br>
-                            <br>A good choice when the number of parameters to be optimized is large, and expectation values are exact.
-                        </p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="card-deck mt-5">
             <div class="card plugin-card">
                 <a href="https://pennylane-lightning.readthedocs.io">
                     <h4 class="card-header juicy-peach-gradient">lightning.qubit</h4>
@@ -65,6 +41,8 @@
                     </div>
                 </a>
             </div>
+        </div>
+        <div class="card-deck mt-5">
             <div class="card plugin-card">
                 <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.devices.default_mixed.DefaultMixed.html">
                     <h4 class="card-header juicy-peach-gradient">default.mixed</h4>
@@ -156,24 +134,24 @@
             </a>
         </div>
         <div class="card-deck mt-3">
+            <a class="card plugin-card" href="https://pennylane-qsharp.readthedocs.io">
+                <h4 class="card-header weird-blue-gradient">
+                    Microsoft QDK
+                    <img class="img-fluid plugin-logo" src="img/qsharp.png" style="max-height: 25px">
+                </h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        Microsoft QDK is a library for quantum programming using the .NET Q# quantum programming language.
+                        Provides access to the QDK full state simulator to be used with PennyLane.
+                    </p>
+                </div>
+            </a>
             <a class="card plugin-card" href="https://pennylane-qulacs.readthedocs.io">
                 <h4 class="card-header weird-blue-gradient">Qulacs</h4>
                 <div class="card-body">
                     <p class="card-text">
                         Qulacs is a high-performance quantum circuit simulator for simulating large, noisy or parametric quantum circuits.
                         Implemented in C/C++ and with Python interface, Qulacs achieved both high speed circuit simulation and high usability.
-                    </p>
-                </div>
-            </a>
-            <a class="card plugin-card" href="https://pennylane-aqt.readthedocs.io">
-                <h4 class="card-header weird-blue-gradient">
-                    AQT
-                    <img class="img-fluid plugin-logo" src="img/aqt.png">
-                </h4>
-                <div class="card-body">
-                    <p class="card-text">
-                        Access to Alpine Quantum Technologies' ion-trap quantum computer over the cloud.
-
                     </p>
                 </div>
             </a>
@@ -190,27 +168,28 @@
                     </p>
                 </div>
             </a>
-            <a class="card plugin-card" href="https://pennylane-pq.readthedocs.io">
+            <a class="card plugin-card" href="https://pennylane-ionq.readthedocs.io">
                 <h4 class="card-header weird-blue-gradient">
-                    ProjectQ
+                    IonQ
+                    <img class="img-fluid plugin-logo" src="img/ionq_logo.png" style="max-height: 27px;">
                 </h4>
                 <div class="card-body">
                     <p class="card-text">
-                        ProjectQ is an open-source quantum compilation framework.
+                        IonQ is a ion-trap quantum computing company offering access to quantum computing devices over the cloud.
                     </p>
                 </div>
             </a>
         </div>
         <div class="card-deck mt-3">
-            <a class="card plugin-card" href="https://pennylane-qsharp.readthedocs.io">
+            <a class="card plugin-card" href="https://pennylane-aqt.readthedocs.io">
                 <h4 class="card-header weird-blue-gradient">
-                    Microsoft QDK
-                    <img class="img-fluid plugin-logo" src="img/qsharp.png" style="max-height: 25px">
+                    AQT
+                    <img class="img-fluid plugin-logo" src="img/aqt.png">
                 </h4>
                 <div class="card-body">
                     <p class="card-text">
-                        Microsoft QDK is a library for quantum programming using the .NET Q# quantum programming language.
-                        Provides access to the QDK full state simulator to be used with PennyLane.
+                        Access to Alpine Quantum Technologies' ion-trap quantum computer over the cloud.
+
                     </p>
                 </div>
             </a>
@@ -238,14 +217,13 @@
                     </p>
                 </div>
             </a>
-            <a class="card plugin-card" href="https://pennylane-ionq.readthedocs.io">
+            <a class="card plugin-card" href="https://pennylane-pq.readthedocs.io">
                 <h4 class="card-header weird-blue-gradient">
-                    IonQ
-                    <img class="img-fluid plugin-logo" src="img/ionq_logo.png" style="max-height: 27px;">
+                    ProjectQ
                 </h4>
                 <div class="card-body">
                     <p class="card-text">
-                        IonQ is a ion-trap quantum computing company offering access to quantum computing devices over the cloud.
+                        ProjectQ is an open-source quantum compilation framework.
                     </p>
                 </div>
             </a>
@@ -255,7 +233,7 @@
 
     <div class="container">
         <h2>Community plugins</h2>
-        <p>In addition to the offical plugins, there are a wide range of plugins created by the PennyLane community.</p>
+        <p>In addition to the offical plugins, there are also plugins created by the PennyLane community.</p>
         <p><em>To write your own PennyLane-compatible plugin, the best place to start is our overview of the <a href="https://pennylane.readthedocs.io/en/stable/development/plugins.html">plugin API</a>. Have a plugin you would like to have listed here? Let us know at <a href="mailto:software@xanadu.ai">software@xanadu.ai</a>.</em></p>
         <div class="card-deck mt-5 mb-4">
             <a class="card plugin-card" href="https://github.com/synqs/pennylane-ls">
