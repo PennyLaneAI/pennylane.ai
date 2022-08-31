@@ -180,9 +180,9 @@ h5 {
 
 .news {
     background-color: #fefefe;
-    box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, .05), 0 2px 25px 2px rgba(0, 0, 0, .2) !important;
+    /*box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, .05), 0 2px 25px 2px rgba(0, 0, 0, .2) !important;*/
     max-width: 100%;
-    height: 40px;
+    height: 80px;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -316,6 +316,17 @@ footer.page-footer .footer-copyright {
     border-radius: 10px!important;
 }
 
+.landing-card {
+    background-color: #fefefe;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-user-select: none;
+    text-align: center;
+    position: relative;
+}
 
 .card-image {
     transition: 0.4s;
