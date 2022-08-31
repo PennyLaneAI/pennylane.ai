@@ -128,7 +128,7 @@ h5 {
     margin-left: 20px;
     font-size: initial;
     color: black;
-    font-family: 'Noto Sans', 'Roboto', sans-serif !important;
+    font-family: 'Quicksand', 'Noto Sans', 'Roboto', sans-serif !important;
     margin-bottom: -9px;
     border-bottom: 3px solid;
     border-bottom-color: white;
@@ -141,7 +141,7 @@ h5 {
 .top-nav-collapse .nav-item:hover:after, .top-nav-collapse .nav-item.active:after {
     border-bottom: 3px solid;
     content: "";
-    border-bottom-color: #19b37b;
+    border-bottom-color: #00b1ff;
     position: absolute;
     bottom: -3px;
     width: 80%;
@@ -152,7 +152,7 @@ h5 {
 .nav-item:hover:after, .nav-item.active:after {
     border-bottom: 3px solid;
     content: "";
-    border-bottom-color: #19b37b;
+    border-bottom-color: #00b1ff;
     position: absolute;
     bottom: -3px;
     width: 80%;
@@ -214,11 +214,12 @@ h5 {
     padding-left: 15px;
     padding-right: 15px;
     display: flex;
+    background-color: #f2f2f2;
 }
 
 .news-item__date {
     font-weight: bold;
-    color: #2d7c7f;
+    color: #00b1ff;
     min-width: fit-content;
     min-width: -moz-fit-content;
     min-width: -webkit-fit-content;
@@ -282,7 +283,7 @@ h5 {
 
 .page-footer a {
     color: #009688 !important;
-    color: #19b37b !important;
+    color: #00b1ff !important;
 }
 
 .page-footer p {
