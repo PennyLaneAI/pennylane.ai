@@ -3,20 +3,20 @@
 {% block navbar %}
 {% include "navbar.html" %}
 {% endblock %}
-<div class="parallax" style="background-image: none; box-shadow: none;">
+<div class="parallax" style="background-image: url('img/background.png'); box-shadow: none;">
     <div class="container">
 
-        <div class="pt-5 text-center teal-text text-lighten-2 mt-5">
-            <img src="img/pennylane_stacked.png" class="logo" srcset="img/pennylane_logo.png"/>
+        <div class="pt-5 text-center teal-text text-lighten-2">
+            <img src="img/pennylane_stacked.png" class="logo" srcset="img/pennylane_logo.svg"/>
         </div>
         <div class="row text-center">
-            <h3 class="col-12 mt-5 mb-5 grey-text" style="font-family: 'Roboto', sans-serif !important;">A cross-platform Python library for differentiable programming of quantum computers. Train a quantum computer the same way as a neural network.</h3>
+            <h3 class="col-12 mt-5 mb-5 dark-grey-text" style="font-family: 'Roboto', sans-serif !important;">A cross-platform Python library for differentiable programming of quantum computers. Train a quantum computer the same way as a neural network.</h3>
         </div>
 
         <div class="row">
             <div class="col-lg-4 mb-5">
                 <a href="https://pennylane.ai/qml">
-                    <div class="card card-image" style="background-image: url(img/learn.png); background-size: cover;">
+                    <div class="landing-card card-image" style="background-image: url(img/learn.png); background-size: cover;">
                         <div class="text-center d-flex align-items-center rgba-white-strong mask">
                             <div>
                                 <h3 class="card-title">
@@ -33,7 +33,7 @@
             </div>
             <div class="col-lg-4 mb-5">
                 <a href="https://pennylane.ai/qml/demonstrations.html">
-                    <div class="card card-image" style="background-image: url(img/blackbird.jpg);">
+                    <div class="landing-card card-image" style="background-image: url(img/blackbird.jpg);">
                         <div class="text-center d-flex align-items-center mask rgba-white-strong">
                             <div>
                                 <h3 class="card-title">
@@ -50,7 +50,7 @@
             </div>
             <div class="col-lg-4 mb-5">
                 <a href="https://codebook.xanadu.ai/">
-                    <div class="card card-image" style="background-image: url(img/codebook_blur.png); background-size: cover;">
+                    <div class="landing-card card-image" style="background-image: url(img/codebook_blur.png); background-size: cover;">
                         <div class="text-center d-flex align-items-center mask"  style="background-color: rgba(236, 221, 234, 0.8)">
                             <div style="width: 100%; min-height: 198px;">
                                 <h3 class="card-title">
@@ -217,14 +217,11 @@
 </div>
 
 
-<div class="row justify-content-center">
-<iframe width="800" height="450" src="https://www.youtube.com/embed/WOLzqeuXVT8?controls=0&modestbranding=1" title="Welcome to PennyLane" frameborder="0" allowfullscreen></iframe>
-</div>
-<br>
-<br>
-
-<div class="parallax" style="background-image: url('img/banner.png'); background-size: cover; min-height: 400px;">
-    <div class="view mask py-5 rgba-grey-slight" style="min-height: 400px;">
+<div class="parallax" style="background-image: url('img/banner.png'); background-size: cover; min-height: 800px; position: relative;">
+    <div class="view mask">
+        <div class="row justify-content-center" style="display: flex;width: 100vw;height: 100vh;justify-content: center;align-items: center;">
+            <iframe width="800px" height="450px" src="https://www.youtube.com/embed/WOLzqeuXVT8?controls=0&modestbranding=1" title="Welcome to PennyLane" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 </div>
 
