@@ -8,6 +8,9 @@ def render_from_template(directory, template_name, **kwargs):
     loader = FileSystemLoader(directory)
     env = Environment(loader=loader)
     template = env.get_template(template_name)
+    kwargs["navbar_left_links"] = NAVBAR_LEFT
+    kwargs["navbar_right_links"] = NAVBAR_RIGHT
+    kwargs["footer"] = FOOTER
     return template.render(**kwargs)
 
 
