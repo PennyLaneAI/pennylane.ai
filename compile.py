@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from jinja2 import FileSystemLoader, Environment
+from pennylane_sphinx_theme import NAVBAR_LEFT, NAVBAR_RIGHT, FOOTER
 
 
 def render_from_template(directory, template_name, **kwargs):
