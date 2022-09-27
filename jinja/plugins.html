@@ -8,7 +8,7 @@
 
 <div class="container mt-5 pt-5 pb-5" id="wide-column">
     <div class="text-center">
-        <h1>Plugins and ecosystem</h1>
+        <h1>Devices and ecosystem</h1>
         <!-- <p class="grey-text w-responsive mx-auto">PennyLane provides a framework for the construction and optimization of hybrid quantum-classical computational models. These models can be dispatched to run on simulators and hardware devices via a large ecosystem of plugins.</p> -->
         <p class="lead grey-text w-responsive mx-auto"> PennyLane is designed from the ground up to be hardware and device agnostic, allowing quantum functions to be easily dispatched to different quantum devices. A single computation can even include multiple quantum devices from different vendors.</p>
         <p class="lead grey-text w-responsive mx-auto mb-5">Build your quantum algorithm once. Run it everywhere.</p>
@@ -20,18 +20,40 @@
 
         <div class="card-deck mt-5">
             <div class="card plugin-card">
-                <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.devices.default_qubit.DefaultQubit.html">
-                    <h4 class="card-header juicy-peach-gradient">default.qubit</h4>
-                    <div class="card-body">
-                        <p class="card-text">
-                            A simple state-vector qubit simulator written in Python, with Autograd, JAX, TensorFlow, and Torch backends.
-                            <br><br>A good choice for optimizations with a moderate number of qubits and parameters, or when using stochastic expectation values.
-                        </p>
-                    </div>
-                </a>
+                <h4 class="card-header juicy-peach-gradient">default.qubit</h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        A simple state-vector qubit simulator written in Python, with Autograd, JAX, TensorFlow, and Torch backends.
+                        <br><br>A good choice for optimizations with a moderate number of qubits and parameters with exact expectation values.
+                    </p>
+                </div>
             </div>
             <div class="card plugin-card">
-                <a href="https://pennylane-lightning.readthedocs.io">
+                <h4 class="card-header juicy-peach-gradient">default.mixed</h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        A mixed-state qubit simulator written in Python, with Autograd, JAX, TensorFlow, and Torch backends.
+
+                        <br><br>A good choice for simulating noisy circuits and quantum channels.
+
+                    </p>
+                </div>
+            </div>
+            <div class="card plugin-card">
+                <h4 class="card-header juicy-peach-gradient">default.gaussian</h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        A simple quantum photonic simulator written in Python.
+                        <br><br>A good choice for optimizing photonic systems.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-deck mt-5">
+
+            <div class="card plugin-card">
+                <a href="https://docs.pennylane.ai/projects/lightning/en/stable/">
                     <h4 class="card-header juicy-peach-gradient">lightning.qubit</h4>
                     <div class="card-body">
                         <p class="card-text">
@@ -41,32 +63,18 @@
                     </div>
                 </a>
             </div>
-        </div>
-        <div class="card-deck mt-5">
             <div class="card plugin-card">
-                <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.devices.default_mixed.DefaultMixed.html">
-                    <h4 class="card-header juicy-peach-gradient">default.mixed</h4>
+                <a href="https://docs.pennylane.ai/projects/lightning-gpu">
+                    <h4 class="card-header juicy-peach-gradient">lightning.gpu</h4>
                     <div class="card-body">
                         <p class="card-text">
-                            A mixed-state qubit simulator written in Python.
-
-                            <br><br>A good choice for simulating noisy circuits and quantum channels.
-
+                            A fast state-vector qubit simulator utilizing the NVIDIA cuQuantum SDK for GPU accelerated circuit simulation.
+                            <br><br>A good choice for a large number of qubits and parameters, taking advantage of one or more GPUs for acceleration.
                         </p>
                     </div>
                 </a>
             </div>
-            <div class="card plugin-card">
-                <a href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.devices.default_gaussian.DefaultGaussian.html">
-                    <h4 class="card-header juicy-peach-gradient">default.gaussian</h4>
-                    <div class="card-body">
-                        <p class="card-text">
-                            A simple quantum photonic simulator written in Python.
-                            <br><br>A good choice for optimizing photonic systems.
-                        </p>
-                    </div>
-                </a>
-            </div>
+
         </div>
     </div>
 
@@ -79,7 +87,7 @@
             Below are a list of official PennyLane plugins supported by the PennyLane development team.
         </p>
         <div class="card-deck mt-5">
-            <a class="card plugin-card" href="https://pennylaneqiskit.readthedocs.io">
+            <a class="card plugin-card" href="https://docs.pennylane.ai/projects/qiskit">
                 <h4 class="card-header weird-blue-gradient">
                     Qiskit <img class="img-fluid plugin-logo" src="img/qiskit_logo_small.png" style="max-width: 20%;">
                 </h4>
@@ -105,7 +113,7 @@
             </a>
         </div>
         <div class="card-deck mt-3">
-            <a class="card plugin-card" href="https://pennylane-sf.readthedocs.io">
+            <a class="card plugin-card" href="https://docs.pennylane.ai/projects/strawberryfields">
                 <h4 class="card-header weird-blue-gradient">
                     Strawberry Fields
                     <img class="img-fluid plugin-logo" src="img/xanadu_sf.png">
@@ -118,7 +126,7 @@
                     </p>
                 </div>
             </a>
-            <a class="card plugin-card" href="https://pennylane-cirq.readthedocs.io/">
+            <a class="card plugin-card" href="https://docs.pennylane.ai/projects/cirq/">
                 <h4 class="card-header weird-blue-gradient">
                     Cirq
                     <img class="img-fluid plugin-logo" src="img/cirq.png" style="max-width: 20%;">
@@ -134,7 +142,7 @@
             </a>
         </div>
         <div class="card-deck mt-3">
-            <a class="card plugin-card" href="https://pennylane-qsharp.readthedocs.io">
+            <a class="card plugin-card" href="https://docs.pennylane.ai/projects/qsharp">
                 <h4 class="card-header weird-blue-gradient">
                     Microsoft QDK
                     <img class="img-fluid plugin-logo" src="img/qsharp.png" style="max-height: 25px">
@@ -146,7 +154,7 @@
                     </p>
                 </div>
             </a>
-            <a class="card plugin-card" href="https://pennylane-qulacs.readthedocs.io">
+            <a class="card plugin-card" href="https://docs.pennylane.ai/projects/qulacs">
                 <h4 class="card-header weird-blue-gradient">Qulacs</h4>
                 <div class="card-body">
                     <p class="card-text">
@@ -157,7 +165,7 @@
             </a>
         </div>
         <div class="card-deck mt-3">
-            <a class="card plugin-card" href="https://pennylane-honeywell.readthedocs.io">
+            <a class="card plugin-card" href="https://docs.pennylane.ai/projects/honeywell">
                 <h4 class="card-header weird-blue-gradient">
                     Honeywell
                     <img class="img-fluid plugin-logo" src="img/honeywell.png" style="max-height: 27px;">
@@ -168,10 +176,10 @@
                     </p>
                 </div>
             </a>
-            <a class="card plugin-card" href="https://pennylane-ionq.readthedocs.io">
+            <a class="card plugin-card" href="https://docs.pennylane.ai/projects/ionq">
                 <h4 class="card-header weird-blue-gradient">
                     IonQ
-                    <img class="img-fluid plugin-logo" src="img/ionq_logo.png" style="max-height: 27px;">
+                    <img class="img-fluid plugin-logo" src="img/ionq.png" style="max-height: 27px;">
                 </h4>
                 <div class="card-body">
                     <p class="card-text">
@@ -181,7 +189,7 @@
             </a>
         </div>
         <div class="card-deck mt-3">
-            <a class="card plugin-card" href="https://pennylane-aqt.readthedocs.io">
+            <a class="card plugin-card" href="https://docs.pennylane.ai/projects/aqt">
                 <h4 class="card-header weird-blue-gradient">
                     AQT
                     <img class="img-fluid plugin-logo" src="img/aqt.png">
@@ -193,7 +201,7 @@
                     </p>
                 </div>
             </a>
-            <a class="card plugin-card" href="https://pennylane-forest.readthedocs.io">
+            <a class="card plugin-card" href="https://docs.pennylane.ai/projects/forest">
                 <h4 class="card-header weird-blue-gradient">
                     Rigetti Forest
                     <img class="img-fluid plugin-logo" src="img/forest.png">
@@ -206,7 +214,7 @@
             <!-- <div class="card hidden-card"></div> -->
         </div>
         <div class="card-deck mt-3">
-            <a class="card plugin-card" href="https://pennylane-orquestra.readthedocs.io">
+            <a class="card plugin-card" href="https://docs.pennylane.ai/projects/orquestra">
                 <h4 class="card-header weird-blue-gradient">
                     Orquestra
                     <img class="img-fluid plugin-logo" src="img/orquestra.png" style="max-height: 27px;">
@@ -217,7 +225,7 @@
                     </p>
                 </div>
             </a>
-            <a class="card plugin-card" href="https://pennylane-pq.readthedocs.io">
+            <a class="card plugin-card" href="https://docs.pennylane.ai/projects/projectq">
                 <h4 class="card-header weird-blue-gradient">
                     ProjectQ
                 </h4>
@@ -234,7 +242,7 @@
     <div class="container">
         <h2>Community plugins</h2>
         <p>In addition to the offical plugins, there are also plugins created by the PennyLane community.</p>
-        <p><em>To write your own PennyLane-compatible plugin, the best place to start is our overview of the <a href="https://pennylane.readthedocs.io/en/stable/development/plugins.html">plugin API</a>. Have a plugin you would like to have listed here? Let us know at <a href="mailto:software@xanadu.ai">software@xanadu.ai</a>.</em></p>
+        <p><em>To write your own PennyLane-compatible plugin, the best place to start is our overview of the <a href="https://docs.pennylane.ai/en/stable/development/plugins.html">plugin API</a>. Have a plugin you would like to have listed here? Let us know at <a href="mailto:software@xanadu.ai">software@xanadu.ai</a>.</em></p>
         <div class="card-deck mt-5 mb-4">
             <a class="card plugin-card" href="https://github.com/synqs/pennylane-ls">
                 <h4 class="card-header spring-warmth-gradient">
