@@ -69,11 +69,15 @@
         We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
     </style>
 
-    <script src="js/vendor.js"></script>
-    <script src="js/app.js"></script>
-    <script src="https://unpkg.com/@xanadu_ai/web-easter-eggs@0.1.10/lib/index.js"></script>
+    <script src="https://unpkg.com/@xanadu_ai/web-easter-eggs@0.1.12/lib/index.js"></script>
     <script>
-        window.XanaduEasterEggs.consoleLogEasterEgg('pennylane')
+        if(window.XanaduEasterEggs){
+            function enableGhostCursor() {
+                window.XanaduEasterEggs.addCustomCursor('ghost');
+            }
+            window.XanaduEasterEggs.consoleLogEasterEgg('pennylane')
+            window.XanaduEasterEggs.addKonamiCodeListener(enableGhostCursor)
+        }
     </script>
 
     {% block scripts %}
