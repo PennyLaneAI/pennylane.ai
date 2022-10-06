@@ -285,6 +285,14 @@ def render_templates():
             "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
             "root": ".."
         },
+        #### CODECAMP redirect ####
+        "codecamp/index.html": {
+            "title": "Xanadu Codecamp",
+            "canonical_url": "https://pennylane.ai/codecamp/index.html",
+            "description": "Join our Codecamp event!.",
+            "thumbnail": "",
+            "root": ".."
+        },
     }
 
     for file in files:
