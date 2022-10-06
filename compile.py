@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from jinja2 import FileSystemLoader, Environment
-from pennylane_sphinx_theme import NAVBAR_LEFT, NAVBAR_RIGHT, FOOTER
+from jinja2 import Environment, FileSystemLoader
+from pennylane_sphinx_theme import FOOTER, NAVBAR_LEFT, NAVBAR_RIGHT
 
 
 def render_from_template(directory, template_name, **kwargs):
@@ -283,6 +283,16 @@ def render_templates():
             "canonical_url": "https://pennylane.ai/carnival/index.html",
             "description": "Try your hand at the PennyLane Quantum Carnival coding challenges.",
             "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
+            "root": ".."
+        },
+        ##########################
+        #  CODECAMP redirect #####
+        ##########################
+        "codecamp/index.html": {
+            "title": "Xanadu Codecamp",
+            "canonical_url": "https://pennylane.ai/codecamp/index.html",
+            "description": "Join our Codecamp event!",
+            "thumbnail": "",
             "root": ".."
         },
     }
