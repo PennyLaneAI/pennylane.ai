@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
     color: black;
     font-weight: normal;
     padding: 0;
-    font-family: 'Noto Sans', 'Roboto', sans-serif !important;
+    font-family: 'Quicksand', 'Noto Sans', 'Roboto', sans-serif !important;
 }
 
 h1, h2, h3 {
@@ -85,7 +85,7 @@ h5 {
 
 .logo {
     margin-top: 10px;
-    max-width: 1000px;
+    max-width: 600px;
     width: 100%;
 }
 
@@ -110,6 +110,15 @@ h5 {
     box-shadow: -1px 14px 30px -20px rgba(0,0,0,0.3);
 }
 
+.navbar-brand {
+  padding-bottom: 0px;
+}
+
+.navbar .nav-item .nav-link .fab, .navbar .nav-item .nav-link .far, .navbar .nav-item .nav-link .fas {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .navbar-nav {
     padding-bottom: 1px;
 }
@@ -119,8 +128,8 @@ h5 {
     margin-left: 20px;
     font-size: initial;
     color: black;
-    font-family: 'Noto Sans', 'Roboto', sans-serif !important;
-    margin-bottom: -8px;
+    font-family: 'Quicksand', 'Noto Sans', 'Roboto', sans-serif !important;
+    margin-bottom: -9px;
     border-bottom: 3px solid;
     border-bottom-color: white;
 }
@@ -132,7 +141,7 @@ h5 {
 .top-nav-collapse .nav-item:hover:after, .top-nav-collapse .nav-item.active:after {
     border-bottom: 3px solid;
     content: "";
-    border-bottom-color: #19b37b;
+    border-bottom-color: #00b1ff;
     position: absolute;
     bottom: -3px;
     width: 80%;
@@ -143,9 +152,9 @@ h5 {
 .nav-item:hover:after, .nav-item.active:after {
     border-bottom: 3px solid;
     content: "";
-    border-bottom-color: #19b37b;
+    border-bottom-color: #00b1ff;
     position: absolute;
-    bottom: -10px;
+    bottom: -3px;
     width: 80%;
     left: 10%;
     transition: .5s ease-in-out,padding .5s ease-in-out
@@ -162,6 +171,94 @@ h5 {
 
 .navbar.navbar-light .breadcrumb .nav-item.active > .nav-link, .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
+}
+
+/*=============================================================================*/
+
+/* News ticker */
+/* Source: https://www.cssscript.com/create-a-simple-news-ticker-using-pure-css-css3/ */
+
+.news {
+    background-color: #fefefe;
+    /*box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, .05), 0 2px 25px 2px rgba(0, 0, 0, .2) !important;*/
+    max-width: 100%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 3px;
+    -webkit-user-select: none;
+    text-align: center;
+    position: relative;
+}
+
+.news__item-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    animation-name: ticker;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.news-item {
+    line-height: 40px;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    background-color: #f2f2f2;
+}
+
+.news-item__date {
+    font-weight: bold;
+    color: #00b1ff;
+    min-width: fit-content;
+    min-width: -moz-fit-content;
+    min-width: -webkit-fit-content;
+}
+
+.news-item__link, .news-item__link:hover {
+    color: #000;
+}
+
+.news-item__link {
+    display: block;
+    margin: 0 0 0 0.5rem;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-user-select: none
+}
+
+.news ul:hover { animation-play-state: paused }
+.news span:hover+ul { animation-play-state: paused }
+
+@keyframes ticker {
+    0% { top: 40px; visibility: visible; }
+    5% { top: 0; }
+    15% { top: 0; }
+    20% { top: -40px; }
+    35% { top: -40px; }
+    40% { top: -80px; }
+    55% { top: -80px; }
+    60% { top: -120px; }
+    75% { top: -120px; }
+    80% { top: -160px; }
+    95% { top: -160px; }
+    97% { visibility: hidden; }
+    99% { top: -200px; }
+    100% { top: 40px; visibility: hidden; }
 }
 
 /*=============================================================================*/
@@ -186,7 +283,7 @@ h5 {
 
 .page-footer a {
     color: #009688 !important;
-    color: #19b37b !important;
+    color: #00b1ff !important;
 }
 
 .page-footer p {
@@ -220,6 +317,17 @@ footer.page-footer .footer-copyright {
     border-radius: 10px!important;
 }
 
+.landing-card {
+    background-color: #fefefe;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-user-select: none;
+    text-align: center;
+    position: relative;
+}
 
 .card-image {
     transition: 0.4s;
@@ -417,4 +525,14 @@ pre {
         font-size: x-small;
     }
 
+}
+
+/* Unitary Hack Main Banner Content Font and Size */
+.unitary-height{
+    font-family: 'Noto Sans', 'Roboto', sans-serif !important;
+    font-size: 24px;
+}
+
+.text-roboto {
+  font-family: 'Roboto', sans-serif !important;
 }

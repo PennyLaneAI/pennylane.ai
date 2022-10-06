@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity":
+        [
+        {% for question, answer in faq %}
+            {
+                "@type": "Question",
+                "name": {{ question | tojson }},
+                "acceptedAnswer":
+                {
+                    "@type": "Answer",
+                    "text": {{ answer | tojson }}
+                }
+            }{{ "," if not loop.last }}
+        {% endfor %}
+        ]
+    }
+    </script>
+{% endblock %}
+
+{% block content %}
+{% block navbar %}
+{% include "navbar.html" %}
+{% endblock %}
+
+<div class="container mt-5 pt-5 pb-5" id="main-column">
+
+    <div class="text-center mb-5">
+        <h1 class="h1-responsive">Frequently Asked Questions</h1>
+        <p class="lead w-responsive mx-auto grey-text" style="font-family: 'Roboto', sans-serif !important;"> Curious? Find all the details about PennyLane Quantum Carnival in our FAQ.</p>
+
+    </div>
+
+    {% for question, answer in faq %}
+    <a class="collapse-header" data-toggle="collapse" href="#faq{{loop.index}}" aria-expanded="false" aria-controls="faq{{ loop.index }}">
+        <h2 class="mt-4" style="font-size: 19px;">
+            <i class="fas fa-angle-down rotate" style="float: right;"></i> {{ question }}
+        </h2>
+    </a>
+    <div class="collapse" style="color:black;" id="faq{{loop.index}}"><p>{{ answer }}</p></div>
+    {% endfor %}
+
+        <div class="row-sm text-center">
+            <p class="\grey-text" style="font-family: 'Roboto', sans-serif !important;"><a href="terms_and_conditions.html">Terms & Conditions</a>
+            </h3>
+        </div>
+
+
+</div>
+
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+{% endblock %}

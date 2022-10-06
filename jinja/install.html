@@ -7,7 +7,7 @@
 <div class="container mt-5 pt-5" id="main-column">
     <div class="text-center">
         <h1>Install PennyLane</h1>
-        <p class="lead grey-text w-responsive mx-auto">PennyLane supports Python 3.6 or newer.</p>
+        <p class="lead grey-text w-responsive mx-auto">PennyLane supports Python 3.7 or newer.</p>
         <p class="lead grey-text w-responsive mx-auto mb-5">If you currently do not have Python 3 installed, we recommend <a href="https://www.anaconda.com/download/">Anaconda for Python 3</a>, a distributed version of Python packaged for scientific computation.</p>
     </div>
 
@@ -56,13 +56,25 @@ pip install -e .
     </div>
 
     <div class="container">
-        <h2>Install plugins</h2>
+        <h2>Install quantum devices</h2>
 
         <p>
-            PennyLane supports various quantum frameworks and quantum hardware via an array of plugins. For more details, visit the plugins page.
+            PennyLane comes with high performance built-in simulators, such as <code>default.qubit</code>, <code>default.mixed</code>, and <code>lightning.qubit</code>. In addition, it supports additional quantum simulators and quantum hardware via an array of plugins. For more details, visit the <a href="plugins.html">plugins</a> page.
         </p>
 
         <div class="picker nav nav-pills nav-justified" id="plugins">
+            <label class="nav-item">
+                <a class="nav-link" id="lightning">
+                    <input type="checkbox" pip="pennylane-lightning">
+                    <span>lightning.qubit</span>
+                </a>
+            </label>
+            <label class="nav-item">
+                <a class="nav-link" id="gpu">
+                    <input type="checkbox" pip="pennylane-lightning[gpu]">
+                    <span>lightning.gpu</span>
+                </a>
+            </label>
             <label class="nav-item">
                 <a class="nav-link">
                     <input type="checkbox" pip="pennylane-sf">
@@ -80,26 +92,13 @@ pip install -e .
                     <input type="checkbox" pip="pennylane-cirq">
                     <span>Google Cirq</span>
                 </a>
-            </label>
-            <label class="nav-item">
-                <a class="nav-link">
-                    <input type="checkbox" pip="pennylane-forest">
-                    <span>Rigetti forest</span>
-                </a>
-            </label>
-            <label class="nav-item">
-                <a class="nav-link">
-                    <input type="checkbox" pip="pennylane-qsharp">
-                    <span>Microsoft Q#</span>
-                </a>
-            </label>
-        </div>
 
+        </div>
         <div class="tab-content pt-0">
             <div class="tab-pane in show active" role="tabpanel">
                 <pre id="plugin-install">
                     <code class="bash">
-# Select one or more frameworks above to show how to install the PennyLane plugins.
+# Select one or more devices above to install them to work with PennyLane.
                     </code>
                 </pre>
             </div>
@@ -107,7 +106,7 @@ pip install -e .
     </div>
 
     <div class="container">
-        <h2>Install interfaces</h2>
+        <h2>Install machine learning interfaces</h2>
 
         <p>
             PennyLane seamlessly integrates with various machine learning libraries,
@@ -123,7 +122,7 @@ pip install -e .
             </label>
             <label class="nav-item">
                 <a class="nav-link" id="tf">
-                    <input type="checkbox" pip="&quot;tensorflow>=1.13.2&quot;">
+                    <input type="checkbox" pip="tensorflow">
                     <span>TensorFlow</span>
                 </a>
             </label>
