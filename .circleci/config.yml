@@ -27,7 +27,7 @@ jobs:
       - save_cache:
           paths:
             - ./venv
-          key: v4-dependencies-{{ checksum "requirements.txt" }}
+          key: v5-dependencies-{{ checksum "requirements.txt" }}
 
       - run:
           name: Build
