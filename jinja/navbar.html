@@ -1,14 +1,3 @@
-{% set navigation_bar = [
-    (root + '/qml', 'qml', 'Quantum machine learning'),
-    (root + '/qml/demonstrations.html', 'demos', 'Demos'),
-    (root + '/install.html', 'install', 'Install'),
-    (root + '/plugins.html', 'plugins', 'Plugins'),
-    ('https://pennylane.readthedocs.io', 'docs', 'Documentation'),
-    ('https://pennylane.ai/blog', 'blog', 'Blog'),
-] -%}
-
-{% set active_page = active_page|default("none") -%}
-
 <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-light white sticky-top">
 
@@ -26,33 +15,32 @@
 
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
-
-        <!-- Links -->
-
+        <!-- Links on the Left -->
         <ul class="navbar-nav mr-auto">
-            {% for href, id, caption in navigation_bar %}
-                <li class="nav-item{% if id == active_page %} active{% endif %}">
-                    <a class="nav-link" href="{{ href|e }}">{{ caption }}</a>
-                </li>
-            {% endfor %}
+          {% for link in navbar_left_links %}
+            {% if active_page == link.name | lower %}
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ link.href }}">{{ link.name }}</a>
+              <span class="sr-only">(current)</span>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ link.href }}">{{ link.name }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
         </ul>
 
+        <!-- Links on the Right -->
         <ul class="navbar-nav ml-auto nav-flex-icons">
-          <li class="nav-item">
-            <a class="nav-link" href="faq.html">
-              <i class="fab fas fa-question"></i> FAQ
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://discuss.pennylane.ai">
-              <i class="fab fab fa-discourse"></i> Support
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/PennyLaneAI/PennyLane">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </li>
+          {% for link in navbar_right_links %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ link.href }}">
+                <i class="{{ link.icon }} pr-1"></i> {{ link.name }}
+              </a>
+            </li>
+          {% endfor %}
+
         </ul>
     </div>
     <!-- Collapsible content -->

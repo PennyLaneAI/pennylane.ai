@@ -12,6 +12,9 @@
     <title>{{ title }}</title>
 
     <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -20,6 +23,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,900;1,700&display=swap"
         rel="stylesheet" type='/text/css'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
     <!-- favicon -->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
@@ -58,11 +63,22 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fetch-polyfill@0.8.2/fetch.min.js"></script>
     
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:16px Roboto,sans-serif; }
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
+    <style type="text/css">
+      #mc_embed_signup{background:#fff; clear:left; font:16px Roboto,sans-serif; }
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+
+    <script src="https://unpkg.com/@xanadu_ai/web-easter-eggs@0.1.12/lib/index.js"></script>
+    <script>
+        if(window.XanaduEasterEggs){
+            function enableGhostCursor() {
+                window.XanaduEasterEggs.addCustomCursor('ghost');
+            }
+            window.XanaduEasterEggs.consoleLogEasterEgg('pennylane')
+            window.XanaduEasterEggs.addKonamiCodeListener(enableGhostCursor)
+        }
+    </script>
 
     {% block scripts %}
     {% endblock %}
