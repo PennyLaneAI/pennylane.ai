@@ -15,6 +15,7 @@
         }
         #puzzles img {
             max-width: 800px;
+            width: 80%;
         }
     </style>
 {% endblock %}
@@ -35,22 +36,22 @@
 
     <ul class="lightslider" id="puzzles">
         <li>
-            <img src="img/puzzles/puzzle1.png">
+            <img src="img/puzzles/puzzle1.png" title="Hartree-Fock">
         </li>
         <li>
-            <img src="img/puzzles/puzzle2.png">
+            <img src="img/puzzles/puzzle2.png" title="Barren plateau">
         </li>
         <li>
-            <img src="img/puzzles/puzzle3.png">
+            <img src="img/puzzles/puzzle3.png" title="Fault tolerance">
         </li>
         <li>
-            <img src="img/puzzles/puzzle4.png">
+            <img src="img/puzzles/puzzle4.png" title="Error correction">
         </li>
         <li>
-            <img src="img/puzzles/puzzle5.png">
+            <img src="img/puzzles/puzzle5.png" title="Tensor network">
         </li>
         <li>
-            <img src="img/puzzles/puzzle6.png">
+            <img src="img/puzzles/puzzle6.png" title="Qubit tapering">
         </li>
     </ul>
 </div>
@@ -65,10 +66,12 @@
             slideMargin: 10,
             mode: 'fade',
             useCSS: true,
+            keyPress: true,
             auto: false,
             loop: true,
             controls: true,
             pause: 5000,
+            enableDrag: false,
             pager: false,
             prevHtml: "<i class='fas fa-chevron-left black-text' style='font-size: xx-large;'></i>",
             nextHtml: "<i class='fas fa-chevron-right black-text' style='font-size: xx-large;'></i>",
