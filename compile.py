@@ -185,7 +185,7 @@ def render_templates():
             "title": "Puzzles &#8212; PennyLane",
             "canonical_url": "https://pennylane.ai/puzzles.html",
             "description": "Can you solve the quantum puzzles?",
-            "thumbnail": "https://pennylane.ai/img/thumbnail.png",
+            "thumbnail": "pennylane.ai/img/puzzles/puzzle3.png",
             "root": "."
         },
         "404.html": {
@@ -291,6 +291,16 @@ def render_templates():
             "canonical_url": "https://pennylane.ai/carnival/index.html",
             "description": "Try your hand at the PennyLane Quantum Carnival coding challenges.",
             "thumbnail": "https://pennylane.ai/img/carnival_logo_splash.png",
+            "root": ".."
+        },
+        ##########################
+        #  CODECAMP redirect #####
+        ##########################
+        "codecamp/index.html": {
+            "title": "Xanadu Codecamp",
+            "canonical_url": "https://pennylane.ai/codecamp/index.html",
+            "description": "Join our Codecamp event!",
+            "thumbnail": "",
             "root": ".."
         },
     }
