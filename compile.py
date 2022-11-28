@@ -185,7 +185,7 @@ def render_templates():
             "title": "Puzzles &#8212; PennyLane",
             "canonical_url": "https://pennylane.ai/puzzles.html",
             "description": "Can you solve the quantum puzzles?",
-            "thumbnail": "pennylane.ai/img/puzzles/puzzle3.png",
+            "thumbnail": "https://pennylane.ai/img/puzzles/puzzle3.png",
             "root": "."
         },
         "404.html": {
