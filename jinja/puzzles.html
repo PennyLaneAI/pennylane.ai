@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" integrity="sha512-yJHCxhu8pTR7P2UgXFrHvLMniOAL5ET1f5Cj+/dzl+JIlGTh5Cz+IeklcXzMavKvXP8vXqKMQyZjscjf3ZDfGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style type="text/css">
+        #main-column {
+            max-width: 1200px;
+        }
+        #puzzles {
+            text-align: center;
+            list-style-type: none;
+        }
+        #puzzles img {
+            max-width: 1100px;
+            width: 80%;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+{% block navbar %}
+{% set active_page = "faq" %}
+{% include "navbar.html" %}
+{% endblock %}
+
+
+<div class="container mt-1 pt-5 pb-5" id="main-column">
+
+    <div class="text-center">
+        <h1>Puzzles</h1>
+        <p class="lead grey-text w-responsive mx-auto"> Can you solve the quantum puzzles?</p>
+    </div>
+
+    <ul class="lightslider" id="puzzles">
+        <li>
+            <img data-src="img/puzzles/puzzle2.png" title="Barren plateau">
+        </li>
+        <li>
+            <img data-src="img/puzzles/puzzle3.png" title="Fault tolerance">
+        </li>
+        <li>
+            <img data-src="img/puzzles/puzzle1.png" title="Hartree-Fock">
+        </li>
+        <li>
+            <img data-src="img/puzzles/puzzle4.png" title="Error correction">
+        </li>
+        <li>
+            <img data-src="img/puzzles/puzzle5.png" title="Tensor network">
+        </li>
+        <li>
+            <img data-src="img/puzzles/puzzle6.png" title="Qubit tapering">
+        </li>
+    </ul>
+
+    <div class="text-center mt-5">
+        <p class="grey-text w-responsive mx-auto">
+            <br />
+            These puzzles are licensed under
+            <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a>.
+            <br/>
+            Feel free to use them in presentations and outreach!
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#puzzles").lightSlider({
+            item: 1,
+            autoWidth: false,
+            slideMove: 1,
+            slideMargin: 10,
+            mode: 'fade',
+            useCSS: true,
+            keyPress: true,
+            auto: false,
+            loop: true,
+            controls: true,
+            pause: 5000,
+            enableDrag: false,
+            pager: false,
+            prevHtml: "<i class='fas fa-chevron-left black-text' style='font-size: xx-large;'></i>",
+            nextHtml: "<i class='fas fa-chevron-right black-text' style='font-size: xx-large;'></i>",
+
+            //LAZY LOADING
+            onBeforeStart: function (slider) {
+                var img = slider.find('li:last-child img');
+                img.attr('src', img.attr('data-src'));
+
+                for (var i = 1; i <= 2; i++) {
+                    var img = slider.find('li:nth-child(' + i + ') img');
+                    img.attr('src', img.attr('data-src'));
+                }
+            },
+            onBeforeNextSlide: function (slider, scene) {
+                for (var i = 0; i <= 1; i++) {
+                    var img = slider.find('img').eq(slider.getCurrentSlideCount() + i);
+                    img.attr('src', img.attr('data-src'));
+                }
+            },
+            onBeforePrevSlide: function (slider, scene) {
+                for (var i = 0; i <= 1; i++) {
+                    var img = slider.find('img').eq(slider.getCurrentSlideCount() - i - 2);
+                    img.attr('src', img.attr('data-src'));
+                }
+            }
+        });
+    });
+</script>
+
+
+
+{% block footer %}
+{% include "footer.html" %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" integrity="sha512-Gfrxsz93rxFuB7KSYlln3wFqBaXUc1jtt3dGCp+2jTb563qYvnUBM/GP2ZUtRC27STN/zUamFtVFAIsRFoT6/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+{% endblock %}
+
+

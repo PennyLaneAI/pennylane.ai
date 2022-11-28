@@ -179,7 +179,15 @@ def render_templates():
             "thumbnail": "https://pennylane.ai/img/thumbnail.png", 
             "faq": FAQ,
             "root": "."
-        }, 
+        },
+        "puzzles.html": {
+            "faq_page": True,
+            "title": "Puzzles &#8212; PennyLane",
+            "canonical_url": "https://pennylane.ai/puzzles.html",
+            "description": "Can you solve the quantum puzzles?",
+            "thumbnail": "pennylane.ai/img/puzzles/puzzle3.png",
+            "root": "."
+        },
         "404.html": {
             "404_page": True,
             "title": "Page not found &#8212; PennyLane",
