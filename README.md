@@ -2,7 +2,7 @@
 
 ## Description
 
-This repo houses the static content for pennylane.ai
+This repo houses the static content for pennylane.ai.
 
 ## Compiling Templates
 
