@@ -329,6 +329,18 @@ footer.page-footer .footer-copyright {
     position: relative;
 }
 
+.banner-card {
+    border: 3px solid #D9F3FF !important;
+    border-radius: 10px;
+    max-width: 1000px;
+}
+
+@media only screen and (max-width: 600px) {
+    .QHack_logo {
+      display: none;
+    }
+}
+
 .card-image {
     transition: 0.4s;
 }
