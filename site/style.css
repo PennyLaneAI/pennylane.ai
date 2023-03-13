@@ -173,6 +173,25 @@ h5 {
     background-color: inherit;
 }
 
+.banner {
+  background: #0074e0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-text {
+    margin-top: 5px;
+    color: white;
+}
+
+.banner-text a {
+    color: white;
+    text-decoration: underline;
+}
+
 /*=============================================================================*/
 
 /* News ticker */
