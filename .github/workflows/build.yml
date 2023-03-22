@@ -42,16 +42,16 @@ jobs:
           path: site
           retention-days: ${{ github.event_name == 'pull_request' && 10 || 30 }}
 
-      - name: Push changes to dev (pennylane-ai-website-non-react-dev)
+      - name: Push changes to dev
         if: github.event_name == 'push' && github.ref_name == 'dev'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.PL_SITE_DEV_NON_REACT_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.PL_SITE_DEV_NON_REACT_SECRET_ACCESS_KEY }}
-        run: aws s3 sync site s3://pennylane-ai-website-non-react-dev
+        run: aws s3 sync site s3://${{ secrets.PL_SITE_DEV_S3_BUCKET_NAME }}
 
-      - name: Push changes to prod (pennylane-ai-website-non-react-prod)
+      - name: Push changes to prod
         if: github.event_name == 'push' && github.ref_name == 'master'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.PL_SITE_PROD_NON_REACT_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.PL_SITE_PROD_NON_REACT_SECRET_ACCESS_KEY }}
-        run: aws s3 sync site s3://pennylane-ai-website-non-react-prod
+        run: aws s3 sync site s3://${{ secrets.PL_SITE_DEV_S3_BUCKET_NAME }}
