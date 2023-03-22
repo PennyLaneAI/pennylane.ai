@@ -1,0 +1,57 @@
+name: Build Website
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - dev
+
+concurrency:
+  group: pl-website-build-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  AWS_REGION: us-east-1
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.7
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Build
+        run: |
+          mkdir -p site/carnival
+          mkdir -p site/codecamp
+          python compile.py
+
+      - name: Upload Pull Request Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: site
+          path: site
+          retention-days: ${{ github.event_name == 'pull_request' && 10 || 30 }}
+
+      - name: Push changes to dev
+        if: github.event_name == 'push' && github.ref_name == 'dev'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.PL_SITE_DEV_NON_REACT_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.PL_SITE_DEV_NON_REACT_SECRET_ACCESS_KEY }}
+        run: aws s3 sync site s3://${{ secrets.PL_SITE_DEV_S3_BUCKET_NAME }}
+
+      - name: Push changes to prod
+        if: github.event_name == 'push' && github.ref_name == 'master'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.PL_SITE_PROD_NON_REACT_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.PL_SITE_PROD_NON_REACT_SECRET_ACCESS_KEY }}
+        run: aws s3 sync site s3://${{ secrets.PL_SITE_DEV_S3_BUCKET_NAME }}
