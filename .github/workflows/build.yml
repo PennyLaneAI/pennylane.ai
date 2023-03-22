@@ -54,4 +54,4 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.PL_SITE_PROD_NON_REACT_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.PL_SITE_PROD_NON_REACT_SECRET_ACCESS_KEY }}
-        run: aws s3 sync site s3://${{ secrets.PL_SITE_DEV_S3_BUCKET_NAME }}
+        run: aws s3 sync site s3://${{ secrets.PL_SITE_PROD_S3_BUCKET_NAME }}
